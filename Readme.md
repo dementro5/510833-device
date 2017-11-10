@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Пётр Девятериков](https://up.htmlacademy.ru/htmlcss/19/user/510833).
-* Наставник: `Неизвестно`.
+* Наставник: [Шамиль Алисултанов](https://htmlacademy.ru/profile/adrenaline).
 
 ---
 
