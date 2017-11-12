@@ -9,7 +9,11 @@
       <nav class="main-navigation">
         <a class="main-header-logo">Device</a>
         <ul class="site-navigation">
-          <li class="search"><span>Поиск</span></li>
+          <li class="search">
+            <form action="index.html" method="post">
+              <input type="search" name="search" placeholder="Поиск по сайту">
+            </form>
+          </li>
           <li><a href="catalog.html">Каталог товаров</a></li>
           <li><a href="info.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
@@ -38,8 +42,7 @@
           <ul class="slider">
 
             <li class="promo-item-1">
-              <h3>Делай селфи,<br>
-                 как Бен Стиллер!</h3>
+              <h3>Делай селфи,<br>как Бен Стиллер!</h3>
               <p class="promo-item-number">01</p>
               <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
               <a class="btn" href="#">Подробнее</a>
@@ -61,8 +64,7 @@
             </li>
 
             <li class="promo-item-2">
-              <h3>Худеем<br>
-                правильно!</h3>
+              <h3>Худеем<br>правильно!</h3>
               <p class="promo-item-number">02</p>
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
               <a class="btn" href="#">Подробнее</a>
@@ -81,8 +83,7 @@
 
 
             <li class="promo-item-3">
-              <h3>Порхает как бабочка,<br>
-                жалит как пчела!</h3>
+              <h3>Порхает как бабочка,<br>жалит как пчела!</h3>
               <p class="promo-item-number">03</p>
               <p>Это обычный, на первый взгляд, квадрокоптер оснащён мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="btn" href="#">Подробнее</a>
@@ -108,32 +109,43 @@
           <ul>
             <li class="categories-item">
               <a href="catalog.html">
-                <h3>Виртуальная реальность</h3>
-                <img src="http://placehold.it/160x160" width="160" height="160" alt="Виртуальная реальность">
+                <figure>
+                  <img src="http://placehold.it/160x160" width="160" height="160" alt="Виртуальная реальность">
+                  <figcaption>Виртуальная реальность</figcaption>
+                </figure>
               </a>
             </li>
             <li class="categories-item">
               <a href="catalog.html">
-                <h3>Моноподы и селфи</h3>
-                <img src="http://placehold.it/160x160" width="160" height="160" alt="Моноподы и селфи">
+                <figure>
+                  <img src="http://placehold.it/160x160" width="160" height="160" alt="Моноподы и селфи">
+                  <figcaption>Моноподы и селфи</figcaption>
+                </figure>
+              </a>
+
+            </li>
+            <li class="categories-item">
+              <a href="catalog.html">
+                <figure>
+                  <img src="http://placehold.it/160x160" width="160" height="160" alt="Экшн-камеры">
+                  <figcaption>Экшн-камеры</figcaption>
+                </figure>
               </a>
             </li>
             <li class="categories-item">
               <a href="catalog.html">
-                <h3>Экшн-камеры</h3>
-                <img src="http://placehold.it/160x160" width="160" height="160" alt="Экшн-камеры">
+                <figure>
+                  <img src="http://placehold.it/160x160" width="160" height="160" alt="Фитнес-браслеты">
+                  <figcaption>Фитнес-браслеты</figcaption>
+                </figure>
               </a>
             </li>
             <li class="categories-item">
               <a href="catalog.html">
-                <h3>Фитнес-браслеты</h3>
-                <img src="http://placehold.it/160x160" width="160" height="160" alt="Фитнес-браслеты">
-              </a>
-            </li>
-            <li class="categories-item">
-              <a href="catalog.html">
-                <h3>Квадрокоптеры</h3>
-                <img src="http://placehold.it/160x160" width="160" height="160" alt="Квадрокоптеры">
+                <figure>
+                  <img src="http://placehold.it/160x160" width="160" height="160" alt="Квадрокоптеры">
+                  <figcaption>Квадрокоптеры</figcaption>
+              </figure>
               </a>
             </li>
           </ul>
@@ -182,23 +194,23 @@
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
           <p>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими трансопртными компаниями:</p>
           <ul>
-            <li><b>Деловые линии</b></li>
-            <li><b>Автотрейдинг</b></li>
-            <li><b>ЖелДорЭкспедиция</b></li>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="btn about-btn" href="#">Подробнее о нас</a>
+          <input class="btn about-btn" type="button" value="Подробнее о нас">
         </article>
 
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <p><a href="#"><img src="http://placehold.it/560x222" width="560" height="222" alt="Карта"></a></p>
-          <span class="btn contacts-write-us">Напишите нам</span>
+          <input class="btn contacts-write-us" type="button" value="Напишите нам">
         </section>
     </main>
     <footer class="main-footer">
       <a class="main-footer-logo">Device</a>
-      <p>Г. Москваб ул. Строителей, 15</p>
+      <address>Г. Москваб ул. Строителей, 15</address>
 
       <ul class="main-footer-information">
         <li><a href="info.html">Доставка</a></li>
@@ -220,7 +232,7 @@
         <li class="basket-link">Корзина</li>
       </ul>
 
-      <p>Тел.: +7 (495) 495-95-95</p>
+      <address>Тел.: +7 (495) 495-95-95</address>
     </footer>
 
     <section class="modal write-us">
