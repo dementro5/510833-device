@@ -12,14 +12,14 @@
         </a>
         <ul class="site-navigation">
           <li class="search">
-            <form action="index.html" method="post">
-              <input type="search" name="search" placeholder="Поиск по сайту">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+              <input type="search" name="search" placeholder="Поиск по сайту" required>
             </form>
           </li>
-          <li><a href="catalog.html">Каталог товаров</a></li>
-          <li><a href="info.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><button type="button">Каталог товаров</button></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="catalog-menu">
           <li><a href="catalog.html">Виртуальная реальность</a></li>
@@ -30,9 +30,9 @@
           <li><a href="catalog.html">Квадрокоптеры</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">Войти</li>
-          <li class="compare-link">Сравнить</li>
-          <li class="basket-link">Корзина</li>
+          <li class="login-link"><a href="#">Войти</a></li>
+          <li class="compare-link"><a href="#">Сравнить</a></li>
+          <li class="basket-link"><a href="#">Корзина</a></li>
         </ul>
       </nav>
     </header>
@@ -192,10 +192,10 @@
         <section class="partners">
           <h2 class="visually-hidden">Наши партнёры</h2>
           <ul>
-            <li><a href="catalog.html"><img src="img/logo-1.jpg" width="260" height="100" alt="Компания DJI"></a></li>
-            <li><a href="catalog.html"><img src="img/logo-2.jpg" width="260" height="100" alt="Компания SP Gadgets"></a></li>
-            <li><a href="catalog.html"><img src="img/logo-3.jpg" width="260" height="100" alt="Компания GoPro"></a></li>
-            <li><a href="catalog.html"><img src="img/logo-4.jpg" width="260" height="100" alt="Компания Vive"></a></li>
+            <li><a href="#"><img src="img/logo-1.jpg" width="260" height="100" alt="Компания DJI"></a></li>
+            <li><a href="#"><img src="img/logo-2.jpg" width="260" height="100" alt="Компания SP Gadgets"></a></li>
+            <li><a href="#"><img src="img/logo-3.jpg" width="260" height="100" alt="Компания GoPro"></a></li>
+            <li><a href="#"><img src="img/logo-4.jpg" width="260" height="100" alt="Компания Vive"></a></li>
           </ul>
         </section>
 
@@ -208,14 +208,14 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <input class="btn about-btn" type="button" value="Подробнее о нас">
+          <a class="btn about-btn" href="#">Подробнее о нас</a>
         </article>
 
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <p><a href="#"><img src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"></a></p>
-          <input class="btn contacts-write-us" type="button" value="Напишите нам">
+          <p><button type="button"><img src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"></button></p>
+          <button class="btn contacts-write-us" type="button">Напишите нам</button>
         </section>
     </main>
     <footer class="main-footer">
@@ -225,9 +225,9 @@
       <address>Г. Москва, ул. Строителей, 15</address>
 
       <ul class="main-footer-information">
-        <li><a href="info.html">Доставка</a></li>
-        <li><a href="guarantee.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
 
       <div class="footer-social">
@@ -239,24 +239,44 @@
       </div>
 
       <ul class="main-footer-user-navigation">
-        <li class="login-link">Войти</li>
-        <li class="compare-link">Сравнить</li>
-        <li class="basket-link">Корзина</li>
+        <li class="login-link"><a href="#">Войти</a></li>
+        <li class="compare-link"><a href="#">Сравнить</a></li>
+        <li class="basket-link"><a href="#">Корзина</a></li>
       </ul>
 
-      <address>Тел.: +7 (495) 495-95-95</address>
+      <address><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></address>
     </footer>
 
-    <section class="modal write-us">
+    <section class="modal modal-feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Здесь будет форма -->
-      <span class="modale-close">x</span>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label>
+              Ваше имя:
+              <input type="text" name="feedback-name" placeholder="Представьтесь пожалуйста" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Ваш e-mail:
+              <input type="email" name="feedback-email" placeholder="Для отправки ответа" required>
+            </label>
+          </p>
+          <p>
+            <label>
+              Текст письма:
+              <textarea name="feedback-message" placeholder="В свободной форме" required></textarea>
+            </label>
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section>
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/map-big.jpg" width="960" height="559" alt="Крупная карта офиса по адресу улица Строителей, 15">
-      <span class="modale-close">x</span>
+      <p><img src="img/map-big.jpg" width="960" height="559" alt="Крупная карта офиса по адресу улица Строителей, 15"></p>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
   </body>
