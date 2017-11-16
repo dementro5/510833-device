@@ -54,7 +54,7 @@
             <legend>Стоимость</legend>
             <p>
               <input id="filterPrice" type="range" name="price-max" min="0" max="10000">
-              <label class="visyally-hidden" for="filterPrice">Задайте максимальную цену для поиска</label>
+              <label class="visually-hidden" for="filterPrice">Задайте максимальную цену для поиска</label>
             </p>
             <p>
               <span>до</span>
@@ -65,23 +65,23 @@
             <legend>Цвет</legend>
             <ul>
               <li>
-                <input class="visyally-hidden" id="filter-color-black" type="checkbox" name="color-black" checked>
+                <input class="visually-hidden" id="filter-color-black" type="checkbox" name="color-black" checked>
                 <label for="filter-color-black">Черный</label>
               </li>
               <li>
-                <input class="visyally-hidden" id="filter-color-white" type="checkbox" name="color-white">
+                <input class="visually-hidden" id="filter-color-white" type="checkbox" name="color-white">
                 <label for="filter-color-white">Белый</label>
               </li>
               <li>
-                <input class="visyally-hidden" id="filter-color-blue" type="checkbox" name="color-blue" checked>
+                <input class="visually-hidden" id="filter-color-blue" type="checkbox" name="color-blue" checked>
                 <label for="filter-color-blue">Голубой</label>
               </li>
               <li>
-                <input class="visyally-hidden" id="filter-color-red" type="checkbox" name="color-red" checked>
+                <input class="visually-hidden" id="filter-color-red" type="checkbox" name="color-red" checked>
                 <label for="filter-color-red">Красный</label>
               </li>
               <li>
-                <input class="visyally-hidden" id="filter-color-pink" type="checkbox" name="color-pink">
+                <input class="" id="filter-color-pink" type="checkbox" name="color-pink">
                 <label for="filter-color-pink">Розовый</label>
               </li>
             </ul>
@@ -105,31 +105,33 @@
 
       <section class="sorting">
         <h2>Сортировка:</h2>
-        <ul>
-          <li>
-            <input class="visually-hidden sorting-radio" id="sorting-price" type="radio" name="sorting-type" value="byprice" checked>
-            <label for="sorting-price">По цене</label>
-          </li>
-          <li>
-            <input class="visually-hidden sorting-radio" id="sorting-type" type="radio" name="sorting-type" value="byprice">
-            <label for="sorting-type">По типу</label>
-          </li>
-          <li>
-            <input class="visually-hidden sorting-radio" id="sorting-popularity" type="radio" name="sorting-type" value="byprice">
-            <label for="sorting-popularity">По популярности</label>
-          </li>
-        </ul>
+        <form class="sorting-form" action="https://echo.htmlacademy.ru" method="get">
+          <ul>
+            <li>
+              <input class="visually-hidden sorting-radio" id="sorting-price" type="radio" name="sorting-type" value="byprice" checked>
+              <label for="sorting-price">По цене</label>
+            </li>
+            <li>
+              <input class="visually-hidden sorting-radio" id="sorting-type" type="radio" name="sorting-type" value="byprice">
+              <label for="sorting-type">По типу</label>
+            </li>
+            <li>
+              <input class="visually-hidden sorting-radio" id="sorting-popularity" type="radio" name="sorting-type" value="byprice">
+              <label for="sorting-popularity">По популярности</label>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <input class="visually-hidden" id="sorting-max" type="radio" name="sorting" value="toMax" >
-            <label class="visually-hidden" for="sorting-max">Сортировать по убыванию</label>
-          </li>
-          <li>
-            <input class="visually-hidden" id="sorting-min" type="radio" name="sorting" value="toMin" checked>
-            <label class="visually-hidden" for="sorting-min">Сортировать по возрастанию</label>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <input class="visually-hidden" id="sorting-max" type="radio" name="sorting-direction" value="toMax" >
+              <label class="visually-hidden" for="sorting-max">Сортировать по убыванию</label>
+            </li>
+            <li>
+              <input class="visually-hidden" id="sorting-min" type="radio" name="sorting-direction" value="toMin" checked>
+              <label class="visually-hidden" for="sorting-min">Сортировать по возрастанию</label>
+            </li>
+          </ul>
+        </form>
       </section>
 
       <section class="catalog">
