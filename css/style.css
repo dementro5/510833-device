@@ -1,0 +1,295 @@
+@font-face {
+  font-family: "Gilroy";
+  src:
+    local("Gilroy Light"),
+    url(../fonts/gilroylight.woff2) format("woff2"),
+    url(../fonts/gilroylight.woff) format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+    local("Gilroy ExtraBold"),
+    url(../fonts/gilroyextrabold.woff2) format("woff2"),
+    url(../fonts/gilroyextrabold.woff) format("woff");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    local("Open Sans Light"),
+    url(../fonts/opensanslight.woff2) format("woff2"),
+    url(../fonts/opensanslight.woff) format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    local("Open Sans"),
+    url(../fonts/opensans.woff2) format("woff2"),
+    url(../fonts/opensans.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  background-color: #f7e296;
+}
+
+  .user-navigation {
+    list-style: none;
+  }
+
+    .user-navigation a,
+    .user-navigation input,
+    .user-navigation button {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 36px;
+      letter-spacing: 0.01em;
+      color: #000000;
+    }
+
+    .user-navigation a:hover,
+    .user-navigation a:focus {
+      opacity: 0.6;
+    }
+
+    .user-navigation a:active {
+      opacity: 0.3;
+    }
+
+    .user-navigation input {
+      background-color: #f7e296;
+      border: none;
+      opacity: 0.3;
+    }
+
+    .user-navigation input:hover {
+      opacity: 0.6;
+    }
+
+    .user-navigation input:active,
+    .user-navigation input:focus {
+      border-bottom: 2px solid #000000;
+      opacity: 1;
+    }
+
+    .user-navigation button {
+      background-color: #f7e296;
+      border: 2px solid #000000;
+    }
+
+    .user-navigation button:hover,
+    .user-navigation button:focus {
+      color: #ffffff;
+
+      background-color: #000000;
+    }
+
+    .user-navigation button:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+  .main-menu {
+    list-style: none;
+  }
+
+    .main-menu a {
+      font-family: "Gilroy", Arial, sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.2em;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .main-menu a:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+      .sub-menu {
+        list-style: none;
+      }
+        .sub-menu a {
+          font-family: "Open Sans", Arial, sans-serif;
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 36px;
+          letter-spacing: 0.01em;
+          text-transform: none;
+        }
+
+.slider-switches {
+  list-style: none;
+}
+
+.slider-list {
+  list-style: none;
+}
+
+  .slider-item h3 {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  .slider-item .item-number {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 179.2px;
+    line-height: 179.2px;
+    letter-spacing: 0.01em;
+    color: lightgray;
+  }
+
+  .slider-item .item-description {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #464646;
+  }
+
+  .slider-item a {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    color: #000000;
+    text-transform: uppercase;
+
+    background-color: lightgray;
+  }
+
+  .slider-item a:hover,
+  .slider-item a:focus {
+    background-color: #f0c52e;
+  }
+
+  .slider-item a:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .slider-item td {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  .slider-item th {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #464646;
+  }
+
+.catigories ul {
+  list-style: none;
+}
+  .categories-item img {
+    background-color: rgba(240, 197, 46, 0.5);
+  }
+
+    .categories-item-link:hover img,
+    .categories-item-link:focus img {
+      background-color: rgba(240, 197, 46, 1);
+    }
+
+    .categories-item-link:active img,
+    .categories-item-link:active figcaption {
+      opacity: 0.3;
+    }
+
+  .categories-item figcaption {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+.services {
+  background-color: #e5e5e5;
+}
+
+
+
+/*Cтили каталога*/
+
+.filter {
+  background-color: #eeeeee;
+}
+
+.filter h2 {
+  background-color: #dcdcdc;
+}
+
+.sorting {
+  background-color: #ebebeb;
+}
+
+.catalog-item-menu-hover {
+  background-color: rgba(238, 238, 238, 0.70);
+}
+
+.pagination {
+  background-color: #ebebeb;
+}
+
+/*Cтили каталога*/
+.main-footer {
+  background-color: #464646;
+}
+
+.test {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.test2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.test3 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.test4 {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
