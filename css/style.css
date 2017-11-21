@@ -47,249 +47,742 @@ a {
   text-decoration: none;
 }
 
+
+.btn {
+  padding: 10px 20px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f0c52e;
+  background-image: linear-gradient(#ffffff 39%, #f0c52e 39%, #f0c52e 60%, #ffffff 60%);
+  border: none;
+}
+
+
+.btn:hover,
+.btn:focus {
+  background-image: none;
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .main-header {
   background-color: #f7e296;
 }
 
-  .user-navigation {
-    list-style: none;
-  }
+.main-header-logo {
+  position: relative;
 
-    .user-navigation a,
-    .user-navigation input,
-    .user-navigation button {
-      font-family: "Open Sans", Arial, sans-serif;
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 36px;
-      letter-spacing: 0.01em;
-      color: #000000;
-    }
+  display: block;
+}
 
-    .user-navigation a:hover,
-    .user-navigation a:focus {
-      opacity: 0.6;
-    }
+.main-header-logo::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    .user-navigation a:active {
-      opacity: 0.3;
-    }
+  content:"";
+}
 
-    .user-navigation input {
-      background-color: #f7e296;
-      border: none;
-      opacity: 0.3;
-    }
+.main-header-logo:hover img,
+.main-header-logo:focus img {
+  opacity: 0.6;
+}
 
-    .user-navigation input:hover {
-      opacity: 0.6;
-    }
+.main-header-logo:active img {
+  opacity: 0.3;
+}
 
-    .user-navigation input:active,
-    .user-navigation input:focus {
-      border-bottom: 2px solid #000000;
-      opacity: 1;
-    }
-
-    .user-navigation button {
-      background-color: #f7e296;
-      border: 2px solid #000000;
-    }
-
-    .user-navigation button:hover,
-    .user-navigation button:focus {
-      color: #ffffff;
-
-      background-color: #000000;
-    }
-
-    .user-navigation button:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-  .main-menu {
-    list-style: none;
-  }
-
-    .main-menu a {
-      font-family: "Gilroy", Arial, sans-serif;
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: 0.2em;
-      color: #000000;
-      text-transform: uppercase;
-    }
-
-    .main-menu a:hover,
-    .main-menu a:focus {
-      color: rgba(0, 0, 0, 0.6);
-    }
-
-    .main-menu a:active {
-      color: rgba(0, 0, 0, 0.3);
-    }
-
-      .sub-menu {
-        list-style: none;
-      }
-        .sub-menu a {
-          font-family: "Open Sans", Arial, sans-serif;
-          font-weight: 300;
-          font-size: 15px;
-          line-height: 36px;
-          letter-spacing: 0.01em;
-          text-transform: none;
-        }
-
-.slider-switches {
+.user-navigation {
   list-style: none;
 }
 
-.slider-list {
+.user-navigation a,
+.user-navigation p,
+.user-navigation input,
+.user-navigation button {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.logout-link a {
+  opacity: 0.3;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  opacity: 0.6;
+}
+
+.user-navigation a:active {
+  opacity: 0.3;
+}
+
+.user-navigation input {
+  background-color: #f7e296;
+  border: none;
+  opacity: 0.3;
+}
+
+.user-navigation input:hover {
+  opacity: 0.6;
+}
+
+.user-navigation input:active,
+.user-navigation input:focus {
+  border-bottom: 2px solid #000000;
+  opacity: 1;
+}
+
+.user-navigation button {
+  background-color: #f7e296;
+  border: 2px solid #000000;
+}
+
+.user-navigation button:hover,
+.user-navigation button:focus {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.user-navigation button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-menu {
   list-style: none;
 }
 
-  .slider-item h3 {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 47px;
-    letter-spacing: 0.01em;
-    color: #000000;
-  }
+.main-menu a {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+}
 
-  .slider-item .item-number {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 179.2px;
-    line-height: 179.2px;
-    letter-spacing: 0.01em;
-    color: lightgray;
-  }
+.main-menu a:hover,
+.main-menu a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
 
-  .slider-item .item-description {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 0.01em;
-    color: #464646;
-  }
+.main-menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 
-  .slider-item a {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 0.2em;
-    color: #000000;
-    text-transform: uppercase;
+.sub-menu {
+  display: none;
 
-    background-color: lightgray;
-  }
+  list-style: none;
+}
 
-  .slider-item a:hover,
-  .slider-item a:focus {
-    background-color: #f0c52e;
-  }
+.catalog-link:hover .sub-menu {
+  display: block;
+}
 
-  .slider-item a:active {
-    color: rgba(0, 0, 0, 0.3);
-  }
+.sub-menu a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
 
-  .slider-item td {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 300;
-    font-size: 36px;
-    letter-spacing: 0.01em;
-    color: #000000;
-  }
+.promo-controls {
+  list-style: none;
+}
 
-  .slider-item th {
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: 0.01em;
-    color: #464646;
-  }
+.promo-item h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.promo-item .item-number {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 179.2px;
+  line-height: 179.2px;
+  letter-spacing: 0.01em;
+  color: lightgray;
+}
+
+.promo-item .item-description {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.promo-item td {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.promo-item th {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.promo-btn:nth-of-type(1):checked ~ .promo-controls li:nth-of-type(1) label,
+.promo-btn:nth-of-type(2):checked ~ .promo-controls li:nth-of-type(2) label,
+.promo-btn:nth-of-type(3):checked ~ .promo-controls li:nth-of-type(3) label {
+  color: #f7e184;
+
+  background-color: #000000;
+}
+
+
+.promo-item {
+  display: none;
+}
+
+.promo-btn:nth-of-type(1):checked ~ .promo-list li:nth-of-type(1),
+.promo-btn:nth-of-type(2):checked ~ .promo-list li:nth-of-type(2),
+.promo-btn:nth-of-type(3):checked  ~ .promo-list li:nth-of-type(3) {
+  display: block;
+}
 
 .catigories ul {
   list-style: none;
 }
-  .categories-item img {
-    background-color: rgba(240, 197, 46, 0.5);
-  }
 
-    .categories-item-link:hover img,
-    .categories-item-link:focus img {
-      background-color: rgba(240, 197, 46, 1);
-    }
+.categories-item img {
+  background-color: rgba(240, 197, 46, 0.5);
+}
 
-    .categories-item-link:active img,
-    .categories-item-link:active figcaption {
-      opacity: 0.3;
-    }
+.categories-item-link:hover img,
+.categories-item-link:focus img {
+  background-color: rgba(240, 197, 46, 1);
+}
 
-  .categories-item figcaption {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 0.01em;
-    color: #000000;
-  }
+/*В IE 11 есть проблемы с возможностью активировать родителя (:active) кликом на любого потомка*/
+/*https://habrahabr.ru/post/138864/*/
+/*Решить можно перекрыв родителя его псевдоклассом, тогда при нажатии на дочерний элемент мы будем активировать родителя*/
+.categories-item-link {
+  position: relative;
+
+  display: block;
+}
+
+.categories-item-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content:"";
+}
+/**/
+/**/
+/**/
+
+.categories-item-link:active {
+  opacity: 0.3;
+}
+
+.categories-item figcaption {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
 
 .services {
   background-color: #e5e5e5;
 }
 
+.services-controls {
+    list-style: none;
+}
 
+.services-controls label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: yellow;
+}
+
+.services-controls label:hover {
+    background-color: #f0c52e;
+}
+
+.services-list h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.services-list p {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.services-btn:nth-of-type(1):checked ~ .services-controls li:nth-of-type(1) label,
+.services-btn:nth-of-type(2):checked ~ .services-controls li:nth-of-type(2) label,
+.services-btn:nth-of-type(3):checked ~ .services-controls li:nth-of-type(3) label {
+  color: #f7e184;
+
+  background-color: #000000;
+}
+
+.services-list li {
+  display: none;
+}
+
+.services-btn:nth-of-type(1):checked ~ .services-list li:nth-of-type(1),
+.services-btn:nth-of-type(2):checked ~ .services-list li:nth-of-type(2),
+.services-btn:nth-of-type(3):checked  ~ .services-list li:nth-of-type(3) {
+  display: block;
+}
+
+.brands ul {
+  list-style: none;
+}
+
+.brands a {
+  position: relative;
+}
+
+.brands a:hover::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.brands-dji:hover::after {
+  content: url("../img/logo-1-color.png");
+}
+
+.brands-spgadget:hover::after {
+  content: url("../img/logo-2-color.png");
+}
+
+.brands-gopro:hover::after {
+  content: url("../img/logo-3-color.png");
+}
+
+.brands-vive:hover::after {
+  content: url("../img/logo-4-color.png");
+}
+
+.about h2,
+.contacts h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.about p,
+.contacts p {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+}
+
+.about ul {
+  list-style: none;
+}
+
+.about li {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 40px;
+  color: #000000;
+}
 
 /*Cтили каталога*/
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs li {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
 
 .filter {
   background-color: #eeeeee;
 }
 
-.filter h2 {
-  background-color: #dcdcdc;
+.filter-header {
+ background-color: rgba(0, 0, 0, 0.08);
 }
 
-.sorting {
-  background-color: #ebebeb;
+.filter h2,
+.filter h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
-.catalog-item-menu-hover {
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+}
+
+.sort-by-current,
+.sort-icon-current,
+.sorting-list a:active {
+  color: #000000;
+}
+
+.sorting .sort-by {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-list .sort-by:hover,
+.sorting-list .sort-by:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-icon {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.sort-icon:hover,
+.sort-icon:focus {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter legend {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.filter label {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.filter-checkbox:disabled + label,
+ .filter-radio:disabled + label {
+  color: #a6a6a6;
+}
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog-item a {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.catalog-item-price {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.catalog-item-image {
+  position: relative;
+}
+
+.catalog-item-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
   background-color: rgba(238, 238, 238, 0.70);
 }
 
-.pagination {
-  background-color: #ebebeb;
+.catalog-item-image:hover .catalog-item-menu {
+  display: block;
+  cursor: pointer;
 }
 
-/*Cтили каталога*/
+.pagination {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination a {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination .pagination-item {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination .pagination-item:hover,
+.pagination .pagination-item:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination .pagination-item:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.pagination .pagination-btn:hover,
+.pagination .pagination-btn:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination .pagination-btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+/*Cтили каталога закончились*/
+
 .main-footer {
   background-color: #464646;
 }
 
-.test {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
+.main-footer ul {
+  list-style: none;
 }
 
-.test2 {
+.main-footer-logo {
+  position: relative;
+
+  display: block;
+}
+
+.main-footer-logo::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content:"";
+}
+
+.main-footer-logo:hover img,
+.main-footer-logo:focus img {
+    opacity: 0.6;
+}
+
+.main-footer-logo:active img {
+    opacity: 0.3;
+}
+
+
+.footer-user-menu a {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-menu a:hover,
+.footer-user-menu a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-user-menu a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer address,
+.footer-phone-numer {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.footer-phone-numer:hover,
+.footer-phone-numer:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-phone-numer:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.conditions-list a {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: #ffffff;
 }
 
-.test3 {
+.conditions-list a:hover,
+.conditions-list a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.conditions-list a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.social-list a {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
-  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.test4 {
+.social-list a:hover,
+.social-list a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.social-list a:active {
+  color: rgba(255, 255, 255, 0.1)
+}
+
+.main-footer .copyright {
+  opacity: 1;
+  color: rgba(255, 255, 255, 1);
+}
+
+.main-footer .copyright:hover,
+.main-footer .copyright:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-footer .copyright:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.feedback-form label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.feedback-form input,
+.feedback-form textarea {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+
+  background-color: rgba(230, 230, 230, 0.5);
+  border: none;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  color: rgba(70, 70, 70, 1);
+
+  background-color: #ffffff;
+  border: 3px solid rgba(240, 197, 46,0.5);
+  outline: none;
+  box-shadow:
+		0 0 0 3px #ffffff,
+		0 0 0 6px #2f7cc0;
+}
+
+.feedback-form input:invalid,
+.feedback-form textarea:invalid {
+  color: rgba(70, 70, 70, 0.4);
+
+  background-color: rgba(237, 181, 181, 0.5);
+}
+
+.modal-map img {
+  box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
 }
