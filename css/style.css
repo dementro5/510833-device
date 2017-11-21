@@ -274,12 +274,12 @@ a {
   list-style: none;
 }
 
-.categories-item img {
+.categories-item .item-background {
   background-color: rgba(240, 197, 46, 0.5);
 }
 
-.categories-item-link:hover img,
-.categories-item-link:focus img {
+.categories-item-link:hover .item-background,
+.categories-item-link:focus .item-background  {
   background-color: rgba(240, 197, 46, 1);
 }
 
@@ -305,7 +305,8 @@ a {
 /**/
 /**/
 
-.categories-item-link:active {
+.categories-item-link:active img,
+.categories-item-link:active figcaption {
   opacity: 0.3;
 }
 
@@ -460,57 +461,66 @@ a {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.filter {
-  background-color: #eeeeee;
+.sorting {
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
-.filter-header {
- background-color: rgba(0, 0, 0, 0.08);
+.sorting ul {
+  list-style: none;
 }
 
-.filter h2,
-.filter h3 {
+.sorting h2 {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  color: #000000;
 }
 
-.sorting-list {
-  list-style: none;
-}
-
-.sorting-list a {
+.sorting a {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-
-}
-
-.sort-by-current,
-.sort-icon-current,
-.sorting-list a:active {
-  color: #000000;
 }
 
 .sorting .sort-by {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sorting-list .sort-by:hover,
-.sorting-list .sort-by:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.sort-icon {
+.sorting .sort-icon {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.sort-icon:hover,
-.sort-icon:focus {
+.sorting .sort-by:hover,
+.sorting .sort-by:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting .sort-icon:hover,
+.sorting .sort-icon:focus {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.sorting a:active,
+.sorting .sort-by-current,
+.sorting .sort-icon-current {
+  color: rgba(0, 0, 0, 1);
+}
+
+.filter {
+  background-color: #eeeeee;
+}
+
+.filter h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .filter fieldset {

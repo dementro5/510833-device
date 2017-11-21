@@ -63,21 +63,20 @@
         <li class="breadcrumbs-current">Моноподы для селфи</li>
       </ul>
 
-      <section class="filter">
-        <header class="filter-header">
-          <h2>Фильтр:</h2>
+      <section class="sorting">
+        <h2>Сортировка:</h2>
+        <ul>
+          <li><a class="sort-by sort-by-current" href="#">По цене</a></li>
+          <li><a class="sort-by" href="#">По типу</a></li>
+          <li><a class="sort-by" href="#">По популярности</a></li>
+          <li><a class="sort-icon sort-up" href="#">По возрастанию</a></li>
+          <li><a class="sort-icon sort-down sort-icon-current" href="#">По убыванию</a></li>
+        </ul>
+      </section>
 
-          <section class="sorting">
-            <h3>Сортировка:</h3>
-            <ul class="sorting-list">
-              <li><a class="sort-by sort-by-current" href="#">По цене</a></li>
-              <li><a class="sort-by" href="#">По типу</a></li>
-              <li><a class="sort-by" href="#">По популярности</a></li>
-              <li><a class="sort-icon sort-up" href="#">По возрастанию</a></li>
-              <li><a class="sort-icon sort-down sort-icon-current" href="#">По убыванию</a></li>
-            </ul>
-          </section>
-        </header>
+      <section class="filter">
+        <h2>Фильтр:</h2>
+
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get" oninput="FilterPriceOutput.value=filterPrice.value">
           <fieldset>
             <legend>Стоимость</legend>
