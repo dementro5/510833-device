@@ -7,15 +7,20 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
+    <header class="main-header container">
       <nav class="main-navigation">
+
+        <div class="main-header-logo">
+          <a class="header-logo-link">
+            <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
+          </a>
+        </div>
 
         <section>
           <h2 class="visually-hidden">Для пользователя</h2>
           <ul class="user-navigation">
             <li>
-              <form action="https://echo.htmlacademy.ru" method="get">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поиск по сайту</label>
                 <input id="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
                 <button type="submit">Найти</button>
@@ -49,7 +54,7 @@
 
       </nav>
     </header>
-    <main>
+    <main class="container">
         <h1 class="visually-hidden">Интернет-«Магазин Device»</h1>
 
         <section class="promo">

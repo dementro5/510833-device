@@ -7,17 +7,20 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
     <body>
-      <header class="main-header">
-        <a class="main-header-logo" href="index.html">
-          <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
-        </a>
+      <header class="main-header container">
         <nav class="main-navigation">
 
+          <div class="main-header-logo">
+            <a class="header-logo-link" href="index.html">
+              <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
+            </a>
+          </div>
+          
           <section>
             <h2 class="visually-hidden">Для пользователя</h2>
             <ul class="user-navigation">
               <li>
-                <form action="https://echo.htmlacademy.ru" method="get">
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                   <label class="visually-hidden" for="search-field">Поиск по сайту</label>
                   <input id="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
                   <button type="submit">Найти</button>
@@ -62,17 +65,6 @@
         <li><a href="#">Каталог товаров</a></li>
         <li class="breadcrumbs-current">Моноподы для селфи</li>
       </ul>
-
-      <section class="sorting">
-        <h2>Сортировка:</h2>
-        <ul>
-          <li><a class="sort-by sort-by-current" href="#">По цене</a></li>
-          <li><a class="sort-by" href="#">По типу</a></li>
-          <li><a class="sort-by" href="#">По популярности</a></li>
-          <li><a class="sort-icon sort-up" href="#">По возрастанию</a></li>
-          <li><a class="sort-icon sort-down sort-icon-current" href="#">По убыванию</a></li>
-        </ul>
-      </section>
 
       <section class="filter">
         <h2>Фильтр:</h2>
@@ -133,6 +125,25 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Ассортимент селфи-палок</h2>
+
+        <input class="visually-hidden sort-by-down" id="sort-down" type="radio" name="sort">
+        <input class="visually-hidden sort-by-up" id="sort-up" type="radio" name="sort" checked>
+
+        <section class="sorting">
+          <h3>Сортировка:</h3>
+
+          <ul class="sort-types">
+            <li><a class="sort-by sort-by-current" href="#">По цене</a></li>
+            <li><a class="sort-by" href="#">По типу</a></li>
+            <li><a class="sort-by" href="#">По популярности</a></li>
+          </ul>
+
+          <ul class="sorting-controls">
+            <li><label class="sort-icon sort-down-icon" for="sort-down" >По убыванию</label></li>
+            <li><label class="sort-icon sort-up-icon sort-icon-current" for="sort-up">По возрастанию</label></li>
+          </ul>
+        </section>
+
         <ul class="catalog-list">
 
           <li class="catalog-item">
