@@ -709,25 +709,39 @@ a {
 }
 
 .services {
+  margin-bottom: 94px;
+
   background-color: #e5e5e5;
 }
 
 .services .container {
-  display: flex;
-  min-height: 288px;
+  position: relative;
+   min-height: 288px;
 }
 
-.services-controls-wrapper {
-  margin-right: 119px;
+.services-wrapper {
+  position: absolute;
+  top: -30px;
+  display: flex;
+}
+
+.services-controls {
   position: relative;
 
   width: 280px;
+  margin: 0;
+  margin-top: 11px;
+  margin-right: 125px;
+  padding: 0;
+
+  list-style: none;
+  outline: 1px solid green;
 }
 
-.services-controls-wrapper::after {
+.services-controls::after {
   position: absolute;
-  top: -100px;
-  right: 0;
+  top: -80px;
+  right: -5px;
 
   width: 7px;
   height: 319px;
@@ -735,16 +749,6 @@ a {
   background-color: #000000;
 
   content: "";
-}
-
-.services-controls {
-  position: absolute;
-  top: -19px;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
 .services-controls label {
@@ -767,9 +771,9 @@ a {
     background-image: none;
 }
 
-.services-1:checked ~ .services-controls-wrapper label[for="services-btn-1"],
-.services-2:checked ~ .services-controls-wrapper label[for="services-btn-2"],
-.services-3:checked ~ .services-controls-wrapper label[for="services-btn-3"] {
+.services-1:checked ~ .services-controls label[for="services-btn-1"],
+.services-2:checked ~ .services-controls label[for="services-btn-2"],
+.services-3:checked ~ .services-controls label[for="services-btn-3"] {
   padding-right: 120px;
 
   color: #f7e184;
@@ -778,26 +782,20 @@ a {
   background-image: none;
 }
 
-.services-list-wrapper {
-  position: relative;
-
-  width: 460px;
-}
-
 .services-list {
-  position: absolute;
-  top: -30px;
+  position: relative;
 
   width: 460px;
   margin: 0;
   padding: 0;
 
-  outline: 1px solid blue;
+  outline: 1px solid green;
 }
 
 
 .services-list h3 {
   margin: 0;
+  padding: 0;
   margin-bottom: 29px;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -844,14 +842,27 @@ a {
   content: url("../img/credit.svg");
 }
 
-.services-1:checked ~ .services-list-wrapper .services-list li:first-child,
-.services-2:checked ~ .services-list-wrapper .services-list li:nth-child(2),
-.services-3:checked ~ .services-list-wrapper .services-list li:last-child {
+.services-1:checked ~ .services-list li:first-child,
+.services-2:checked ~ .services-list li:nth-child(2),
+.services-3:checked ~ .services-list li:last-child {
   display: block;
 }
 
+.brands {
+  margin-bottom: 138px;
+}
+
 .brands ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.brands li {
+  outline: 1px solid green;
 }
 
 .brands a {
@@ -882,11 +893,29 @@ a {
 
 .about h2,
 .contacts h2 {
+  margin: 0;
+  margin-bottom: 40px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   letter-spacing: 0.01em;
   color: #000000;
+}
+
+.company-description {
+  display: flex;
+}
+
+.about {
+  width: 50%;
+  margin-right: 20px;
+
+  outline: 1px solid green;
+}
+
+.contacts {
+  width: 50%;
 }
 
 .about p,
