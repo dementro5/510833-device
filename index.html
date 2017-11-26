@@ -50,15 +50,15 @@
           </ul>
       </nav>
     </header>
-    <main class="container">
+    <main>
         <h1 class="visually-hidden">Интернет-«Магазин Device»</h1>
 
-      <div class="promo-container">
+      <div class="container promo-container">
         <section class="promo">
           <h2 class="visually-hidden">Лучшие предложения</h2>
-          <input class="visually-hidden promo-btn" id="promo-btn-1" type="radio" name="promo-switch" checked>
-          <input class="visually-hidden promo-btn" id="promo-btn-2" type="radio" name="promo-switch">
-          <input class="visually-hidden promo-btn" id="promo-btn-3" type="radio" name="promo-switch">
+          <input class="visually-hidden promo-1" id="promo-btn-1" type="radio" name="promo-switch" checked>
+          <input class="visually-hidden promo-2" id="promo-btn-2" type="radio" name="promo-switch">
+          <input class="visually-hidden promo-3" id="promo-btn-3" type="radio" name="promo-switch">
 
           <ul class="promo-controls">
             <li><label for="promo-btn-1">Первый слайд</label></li>
@@ -136,7 +136,7 @@
         </section>
       </div>
 
-        <section class="catigories">
+        <section class="container catigories">
           <h2 class="visually-hidden">Категории товаров</h2>
           <ul>
 
@@ -209,35 +209,40 @@
         </section>
 
         <section class="services">
-          <h2 class="visually-hidden">Услуги</h2>
-          <input class="visually-hidden services-btn" id="services-btn-1" type="radio" name="services-switch" checked>
-          <input class="visually-hidden services-btn" id="services-btn-2" type="radio" name="services-switch">
-          <input class="visually-hidden services-btn" id="services-btn-3" type="radio" name="services-switch">
+          <div class="container">
+            <h2 class="visually-hidden">Услуги</h2>
+            <input class="visually-hidden services-1" id="services-btn-1" type="radio" name="services-switch" checked>
+            <input class="visually-hidden services-2" id="services-btn-2" type="radio" name="services-switch">
+            <input class="visually-hidden services-3" id="services-btn-3" type="radio" name="services-switch">
 
-          <ul class="services-controls">
-            <li><label for="services-btn-1">Доставка</label></li>
-            <li><label for="services-btn-2">Гарантия</label></li>
-            <li><label for="services-btn-3">Кредит</label></li>
-          </ul>
-
-            <ul class="services-list">
-              <li>
-                  <h3>Доставка</h3>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              </li>
-              <li>
-                  <h3>Гарантия</h3>
-                  <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>
-                    Товар, не дом, конечно же.</p>
-              </li>
-              <li>
-                  <h3>Кредит</h3>
-                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-              </li>
-            </ul>
+            <div class="services-controls-wrapper">
+              <ul class="services-controls">
+                <li><label class="btn" for="services-btn-1">Доставка</label></li>
+                <li><label class="btn" for="services-btn-2">Гарантия</label></li>
+                <li><label class="btn" for="services-btn-3">Кредит</label></li>
+              </ul>
+            </div>
+            <div class ="services-list-wrapper">
+                <ul class="services-list">
+                  <li>
+                      <h3>Доставка</h3>
+                      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                  </li>
+                  <li>
+                      <h3>Гарантия</h3>
+                      <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>
+                        Товар, не дом, конечно же.</p>
+                  </li>
+                  <li>
+                      <h3>Кредит</h3>
+                      <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                  </li>
+                </ul>
+            </div>
+          </div>
         </section>
 
-        <section class="brands">
+        <section class="container brands">
           <h2 class="visually-hidden">Бренды, представленные у нас</h2>
           <ul>
             <li><a class="brands-dji" href="#"><img src="img/logo-1.jpg" width="260" height="100" alt="Компания DJI"></a></li>
@@ -247,7 +252,7 @@
           </ul>
         </section>
 
-        <article class="about">
+        <article class="container about">
           <h2>О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
           <p>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими трансопртными компаниями:</p>
@@ -259,7 +264,7 @@
           <a class="btn about-btn" href="#">Подробнее о нас</a>
         </article>
 
-        <section class="contacts">
+        <section class="container contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <p><a href="#"><img src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"></a></p>
