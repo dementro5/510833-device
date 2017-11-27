@@ -53,7 +53,7 @@
     <main>
         <h1 class="visually-hidden">Интернет-«Магазин Device»</h1>
 
-      <div class="container promo-container">
+      <div class="container promo-wrapper">
         <section class="promo">
           <h2 class="visually-hidden">Лучшие предложения</h2>
           <input class="visually-hidden promo-1" id="promo-btn-1" type="radio" name="promo-switch" checked>
@@ -61,9 +61,9 @@
           <input class="visually-hidden promo-3" id="promo-btn-3" type="radio" name="promo-switch">
 
           <ul class="promo-controls">
-            <li><label for="promo-btn-1">Первый слайд</label></li>
-            <li><label for="promo-btn-2">Второй слайд</label></li>
-            <li><label for="promo-btn-3">Третий слайд</label></li>
+            <li><label for="promo-btn-1"><span class="visually-hidden">Первый слайд</span></label></li>
+            <li><label for="promo-btn-2"><span class="visually-hidden">Второй слайд</span></label></li>
+            <li><label for="promo-btn-3"><span class="visually-hidden">Третий слайд</span></label></li>
           </ul>
 
           <ul class="promo-list">
@@ -256,7 +256,7 @@
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
           <p>Мы можем доставить ваш товар в самые отдалённые точки России! DEVICE работает со многими трансопртными компаниями:</p>
           <ul>
-            <li>Деловые линии</li>
+            <li>Деловые Линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
@@ -266,41 +266,45 @@
         <section class="contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <p><a href="#"><img src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"></a></p>
+          <p class="map-preview"><a href="#"><img src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"></a></p>
           <button class="btn contacts-write-us" type="button">Напишите нам</button>
         </section>
       </div>
     </main>
 
     <footer class="main-footer">
-      <section class="main-footer-user">
-        <h2 class="visually-hidden">Для пользователя</h2>
-        <img src="img/footer-logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
-        <ul class="footer-user-menu">
-          <li class="login-link"><a href="#">Войти</a></li>
-          <li class="compare-link"><a href="#">Сравнить</a></li>
-          <li class="basket-link"><a href="#">Корзина</a></li>
-        </ul>
-      </section>
-      <section class="main-footer-conditions">
-        <h2 class="visually-hidden">Условия покупки</h2>
-        <address>Г. Москва, ул. Строителей, 15</address>
-        <ul class="conditions-list">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <address><a class="footer-phone-numer" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></address>
-      </section>
-      <section class="main-footer-social">
-        <h2 class="visually-hidden">Мы в соцсетях</h2>
-        <ul class="social-list">
-          <li><a class="social-btn-facebook" href="#">Фейсбук</a></li>
-          <li><a class="social-btn-instagram" href="#">Инстаграмм</a></li>
-          <li><a class="social-btn-twitter" href="#">Твиттер</a></li>
-        </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      </section>
+      <div class="main-footer-wrapper container">
+        <section class="main-footer-user">
+          <h2 class="visually-hidden">Для пользователя</h2>
+          <a class="main-footer-logo">
+            <img src="img/footer-logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
+          </a>
+          <ul class="footer-user-menu">
+            <li class="login-link"><a href="#">Войти</a></li>
+            <li class="compare-link"><a href="#">Сравнить</a></li>
+            <li class="basket-link"><a href="#">Корзина</a></li>
+          </ul>
+        </section>
+        <section class="main-footer-conditions">
+          <h2 class="visually-hidden">Условия покупки</h2>
+          <address>Г. Москва, ул. Строителей, 15</address>
+          <ul class="conditions-list">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <address><a class="footer-phone-numer" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></address>
+        </section>
+        <section class="main-footer-social">
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <ul class="social-list">
+            <li><a class="social-btn-facebook" href="#">Фейсбук</a></li>
+            <li><a class="social-btn-instagram" href="#">Инстаграмм</a></li>
+            <li><a class="social-btn-twitter" href="#">Твиттер</a></li>
+          </ul>
+          <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </section>
+      </div>
     </footer>
 
     <section class="modal modal-feedback">
