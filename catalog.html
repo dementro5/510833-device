@@ -5,6 +5,13 @@
     <title>Интернет-Магазин «Device»</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <noscript>
+      <style>
+        .sub-menu {
+          display: flex;
+        }
+      </style>
+    </noscript>
   </head>
     <body class="inner-page">
       <header class="main-header container">
@@ -15,13 +22,13 @@
             <ul class="user-navigation">
               <li>
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+                  <label><span class="visually-hidden">Поиск по сайту</span></label>
                   <input id="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
                   <button type="submit">Найти</button>
                 </form>
               </li>
               <li class="login-block">
-                <p class="user-name">Валентин Петухов</p>
+                <a class="user-name" href="#">Валентин Петухов</a>
                 <a class="logout-link" href="#">Выйти</a>
               </li>
               <li class="compare-block"><a href="#">Сравнить</a></li>
@@ -259,5 +266,6 @@
         </section>
       </div>
     </footer>
+    <script src="js/focus-within.js"></script>
   </body>
 </html>

@@ -5,17 +5,24 @@
     <title>Интернет-Магазин «Device»</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <noscript>
+      <style>
+        .sub-menu {
+          display: flex;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <header class="main-header container">
       <nav class="main-navigation">
           <a class="main-header-logo">
-            <img src="img/logo.png" width="163" height="36" alt="Логотип интернет-магазина Device">
+            <img src="img/logo.png" width="164" height="36" alt="Логотип интернет-магазина Device">
           </a>
           <ul class="user-navigation">
             <li>
               <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+                <label><span class="visually-hidden">Поиск по сайту</span></label>
                 <input id="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
                 <button type="submit">Найти</button>
               </form>
@@ -61,12 +68,13 @@
           <input class="visually-hidden promo-3" id="promo-btn-3" type="radio" name="promo-switch">
 
           <ul class="promo-controls">
-            <li><label for="promo-btn-1"><span class="visually-hidden">Первый слайд</span></label></li>
-            <li><label for="promo-btn-2"><span class="visually-hidden">Второй слайд</span></label></li>
-            <li><label for="promo-btn-3"><span class="visually-hidden">Третий слайд</span></label></li>
+            <li><label for="promo-btn-1" tabindex="0"><span class="visually-hidden">Первый слайд</span></label></li>
+            <li><label for="promo-btn-2" tabindex="0"><span class="visually-hidden">Второй слайд</span></label></li>
+            <li><label for="promo-btn-3" tabindex="0"><span class="visually-hidden">Третий слайд</span></label></li>
           </ul>
 
           <ul class="promo-list">
+
             <li class="promo-item">
               <div class="item-offer">
                 <h3>Делай селфи,<br>как Бен Стиллер!</h3>
@@ -87,7 +95,7 @@
                 </table>
               </div>
               <p class="item-image">
-                <img src="img/promo-1.png" width="526" height="497" alt="Самая длинная палка для селфи">
+                <img src="img/promo-1.png" width="530" height="497" alt="Самая длинная палка для селфи">
               </p>
             </li>
 
@@ -107,7 +115,7 @@
                 </table>
               </div>
               <p class="item-image">
-                <img src="img/promo-2.png" width="526" height="497" alt="Мотивирующий фитнес-браслет">
+                <img src="img/promo-2.png" width="530" height="497" alt="Мотивирующий фитнес-браслет">
               </p>
             </li>
 
@@ -129,7 +137,7 @@
                 </table>
               </div>
               <p class="item-image">
-                <img src="img/promo-3.png" width="526" height="497" alt="Квадрокоптер, оснащённый лазером, замаскированным под стандартную камеру">
+                <img src="img/promo-3.png" width="530" height="497" alt="Квадрокоптер, оснащённый лазером, замаскированным под стандартную камеру">
               </p>
             </li>
           </ul>
@@ -338,16 +346,6 @@
       <p><img src="img/map-big.jpg" width="960" height="559" alt="Крупная карта офиса по адресу улица Строителей, 15"></p>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-    <noscript>
-<style>
-.sub-menu {
-  display:block !important;
-}
-</style>
-    </noscript>
     <script src="js/focus-within.js"></script>
-    <script>
-//     alert();
-    </script>
   </body>
 </html>
