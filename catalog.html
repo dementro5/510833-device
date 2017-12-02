@@ -24,7 +24,7 @@
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                   <label><span class="visually-hidden">Поиск по сайту</span></label>
                   <input id="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
-                  <button type="submit">Найти</button>
+                  <button type="submit" tabindex="-1">Найти</button>
                 </form>
               </li>
               <li class="login-block">
@@ -83,52 +83,56 @@
           </div>
 
           <div class="inner">
-            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get" oninput="FilterPriceOutput.value=filterPrice.value">
-              <fieldset>
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="select-price">
                 <legend>Стоимость</legend>
-                <p>
-                  <label class="visually-hidden" for="filterPrice">Задайте максимальную цену для поиска</label>
-                  <input id="filterPrice" type="range" name="price-max" min="0" max="10000">
-                </p>
-                <p>
-                  <span>до</span>
-                  <output name="FilterPriceOutput"></output>
-                </p>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar">
+                        <div class="toggle toggle-min" tabindex="0"></div>
+                        <div class="toggle toggle-max" tabindex="0"></div>
+                      </div>
+                    </div>
+                    <div class="price-controls">
+                      <label class="price min-price">от <input name="min-price" type="text" value="0"></label>
+                      <label class="price max-price">до <input name="max-price" type="text" value="5000"></label>
+                    </div>
+                  </div>
               </fieldset>
               <fieldset class="select-color">
                 <legend>Цвет</legend>
                 <ul>
                   <li>
-                    <input class="filter-checkbox" id="filter-color-black" type="checkbox" name="color-black" checked>
+                    <input class="filter-checkbox visually-hidden" id="filter-color-black" type="checkbox" name="color-black" checked>
                     <label for="filter-color-black">Черный</label>
                   </li>
                   <li>
-                    <input class="filter-checkbox" id="filter-color-white" type="checkbox" name="color-white" disabled>
+                    <input class="filter-checkbox visually-hidden" id="filter-color-white" type="checkbox" name="color-white">
                     <label for="filter-color-white">Белый</label>
                   </li>
                   <li>
-                    <input class="filter-checkbox" id="filter-color-blue" type="checkbox" name="color-blue" checked>
-                    <label for="filter-color-blue">Голубой</label>
+                    <input class="filter-checkbox visually-hidden" id="filter-color-blue" type="checkbox" name="color-blue" checked>
+                    <label for="filter-color-blue">Синий</label>
                   </li>
                   <li>
-                    <input class="filter-checkbox" id="filter-color-red" type="checkbox" name="color-red" checked>
+                    <input class="filter-checkbox visually-hidden" id="filter-color-red" type="checkbox" name="color-red" checked>
                     <label for="filter-color-red">Красный</label>
                   </li>
                   <li>
-                    <input class="filter-checkbox" id="filter-color-pink" type="checkbox" name="color-pink">
+                    <input class="filter-checkbox visually-hidden" id="filter-color-pink" type="checkbox" name="color-pink" disabled>
                     <label for="filter-color-pink">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="select-bluetooth">
                 <legend>Bluetooth</legend>
-                <ul>
+                <input class="filter-radio filter-radio-1 visually-hidden" id="filter-bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+                <input class="filter-radio filter-radio-2 visually-hidden" id="filter-bluetooth-no" type="radio" name="bluetooth" value="no">
+                <ul class="select-bluetooth-list">
                   <li>
-                    <input class="filter-radio" id="filter-bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
                     <label for="filter-bluetooth-yes">Есть</label>
                   </li>
                   <li>
-                    <input class="filter-radio" id="filter-bluetooth-no" type="radio" name="bluetooth" value="no" disabled>
                     <label for="filter-bluetooth-no">Нет</label>
                   </li>
                 </ul>
@@ -247,22 +251,22 @@
         </section>
         <section class="main-footer-conditions">
           <h2 class="visually-hidden">Условия покупки</h2>
-          <address>Г. Москва, ул. Строителей, 15</address>
+          <address class="main-footer-adress">Г. Москва, ул. Строителей, 15</address>
           <ul class="conditions-list">
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантия</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <address><a class="footer-phone-numer" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></address>
+          <address class="main-footer-phone"><a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a></address>
         </section>
         <section class="main-footer-social">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul class="social-list">
-            <li><a class="social-btn-facebook" href="#">Фейсбук</a></li>
-            <li><a class="social-btn-instagram" href="#">Инстаграмм</a></li>
-            <li><a class="social-btn-twitter" href="#">Твиттер</a></li>
+            <li><a class="social-btn-facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-btn-instagram" href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
+            <li><a class="social-btn-twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
           </ul>
-          <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"><span class="visually-hidden">HTML Academy</span></a>
         </section>
       </div>
     </footer>
