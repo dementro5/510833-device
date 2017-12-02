@@ -1807,25 +1807,27 @@ table {
   background-color: #464646;
 }
 
-.main-footer::after {
-  content: "";
-
-  position: absolute;
-  bottom: 77px;
-  left: 96px;
-
-  width: 80px;
-  height: 7px;
-
-  background-color: #ffc600;
-}
-
 .main-footer-wrapper {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   padding-top: 62px;
   padding-bottom: 70px;
+}
+
+.main-footer-wrapper::after {
+  content: "";
+
+  position: absolute;
+  bottom: 66px;
+  left: 20px;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
 }
 
 .main-footer ul {
