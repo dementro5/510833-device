@@ -1310,40 +1310,34 @@ table {
 }
 
 .filter-form fieldset {
-  position:relative;
+  margin: 0;
+  padding: 0;
 
   border: none;
-
-  outline: 1px solid red;
-}
-
-.line-base {
-  position: relative;
-}
-
-.filter-form .line-base::before {
-  content: "";
-
-  position: absolute;
-  top: -54px;
-  left: 0;
-
-  width: 100%;
-  height: 2px;
-
-  background-color: #000000;
-}
-
-.filter ul {
-  list-style: none;
 }
 
 .filter legend {
+  position: relative;
+
+  width: 100%;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.01em;
+}
+
+.filter-form legend::before {
+  content: "";
+
+  position: absolute;
+  top: -14px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #000000;
 }
 
 .filter label {
@@ -1357,10 +1351,16 @@ table {
   color: #000000;
 }
 
-.select-price {
-  margin: 0;
-  padding: 0;
-  padding-top: 26px;
+.filter ul {
+  list-style: none;
+}
+
+.filter-form .select-price {
+  margin-bottom: 38px;
+}
+
+.select-price legend {
+  padding-bottom: 26px;
 }
 
 .range-controls {
@@ -1516,11 +1516,12 @@ table {
     0 0 0 6px #2f7cc0;
 }
 
-.select-color {
-  margin: 0;
-  margin-top: 38px;
-  padding: 0;
-  padding-top: 19px;
+.filter-form .select-color {
+  margin-bottom: 44px;
+}
+
+.select-color legend {
+  padding-bottom: 20px;
 }
 
 .select-color ul {
@@ -1532,17 +1533,16 @@ table {
   padding-left: 39px;
 }
 
-.select-bluetooth {
-  margin: 0;
-  margin-top: 45px;
+.filter-form .select-bluetooth {
   margin-bottom: 30px;
-  padding: 0;
+}
 
+.select-bluetooth legend {
+  padding-bottom: 20px;
 }
 
 .select-bluetooth-list {
   margin: 0;
-  margin-top: 20px;
   padding: 0;
 }
 
