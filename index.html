@@ -63,6 +63,7 @@
       <div class="container promo-wrapper">
         <section class="promo">
           <h2 class="visually-hidden">Лучшие предложения</h2>
+          <button class="btn-trigger promo-trigger"></button>
           <input class="visually-hidden promo-1" id="promo-btn-1" type="radio" name="promo-switch" checked>
           <input class="visually-hidden promo-2" id="promo-btn-2" type="radio" name="promo-switch">
           <input class="visually-hidden promo-3" id="promo-btn-3" type="radio" name="promo-switch">
@@ -218,16 +219,24 @@
 
         <div class="services-wrapper">
           <section class="services">
-            <div class="inner container">
+            <div class="inner container services-inner">
                 <h2 class="visually-hidden">Услуги</h2>
+                <button class="btn-trigger services-trigger"></button>
                 <input class="visually-hidden services-1" id="services-btn-1" type="radio" name="services-switch" checked>
                 <input class="visually-hidden services-2" id="services-btn-2" type="radio" name="services-switch">
                 <input class="visually-hidden services-3" id="services-btn-3" type="radio" name="services-switch">
+                <button class="btn-trigger services-trigger"></button>
 
                 <ul class="services-controls">
-                  <li><label class="btn" for="services-btn-1">Доставка</label></li>
-                  <li><label class="btn" for="services-btn-2">Гарантия</label></li>
-                  <li><label class="btn" for="services-btn-3">Кредит</label></li>
+                  <li>
+                    <label class="btn" for="services-btn-1">Доставка</label>
+                  </li>
+                  <li>
+                    <label class="btn" for="services-btn-2">Гарантия</label>
+                  </li>
+                  <li>
+                    <label class="btn" for="services-btn-3">Кредит</label>
+                  </li>
                 </ul>
 
                 <ul class="services-list">

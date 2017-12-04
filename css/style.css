@@ -60,7 +60,8 @@ img {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="radio"].visually-hidden,
+.btn-trigger {
   position: absolute;
 
   width: 1px;
@@ -75,7 +76,21 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.visually-hidden-btn {
+  position: absolute;
 
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -91,14 +106,15 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-align: center;
 
-  background-color: #f0c52e;
-  background-image: linear-gradient(#ffffff 39%, #f0c52e 39%, #f0c52e 60%, #ffffff 60%);
+  background-color: transparent;
+  background-image: linear-gradient(transparent 39%, #f0c52e 39%, #f0c52e 60%, transparent 60%);
   border: none;
 }
 
 
 .btn:hover,
 .btn:focus {
+  background-color: #f0c52e;
   background-image: none;
 }
 
@@ -545,6 +561,28 @@ input[type="radio"].visually-hidden {
   margin-right: 50px;
 }
 
+.promo > input {
+  display:none;
+}
+
+.promo:focus-within > input {
+  display: block;
+}
+
+.promo.focus-within > input {
+  display: block;
+}
+
+.promo-trigger:focus ~ .promo-controls {
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
+}
+
+.promo.focus-within > .promo-trigger:not(:focus) {
+  display: none;
+}
+
 .promo-controls {
   position: absolute;
   z-index: 1;
@@ -585,12 +623,6 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.promo input:focus ~ .promo-controls {
-  box-shadow:
-		0 0 0 3px #ffffff,
-		0 0 0 6px #2f7cc0;
-}
-
 .promo-1:checked ~ .promo-controls label[for="promo-btn-1"]::after,
 .promo-2:checked ~ .promo-controls label[for="promo-btn-2"]::after,
 .promo-3:checked ~ .promo-controls label[for="promo-btn-3"]::after {
@@ -603,6 +635,14 @@ input[type="radio"].visually-hidden {
   border: 1px solid black;
   border-radius: 50%;
   content: "";
+}
+
+.promo-1:focus ~ .promo-controls label[for="promo-btn-1"]::after,
+.promo-2:focus ~ .promo-controls label[for="promo-btn-2"]::after,
+.promo-3:focus ~ .promo-controls label[for="promo-btn-3"]::after {
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
 }
 
 .promo-list {
@@ -846,6 +886,38 @@ table {
   display: flex;
 }
 
+.services-inner > input {
+  display:none;
+}
+
+.services-inner:focus-within > input {
+  display: block;
+}
+
+.services-inner.focus-within > input {
+  display: block;
+}
+
+.services-inner:focus-within > .services-trigger:not(:focus) {
+  display: none;
+}
+
+.services-inner.focus-within > .services-trigger:not(:focus) {
+  display: none;
+}
+
+.services-trigger:focus ~ .services-controls::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ width: 270px;
+
+ box-shadow:
+   0 0 0 3px #ffffff,
+   0 0 0 6px #2f7cc0;
+}
+
 .services-controls {
   position: relative;
 
@@ -879,34 +951,27 @@ table {
   margin-bottom: 23px;
 
   text-align: center;
-
-  background-image: linear-gradient(#e5e5e5 39%, #f0c52e 39%, #f0c52e 60%, #e5e5e5 60%);
 }
 
-.services-controls .btn[for="services-btn-1"] {
-  background-image: linear-gradient(#ffffff 39%, #f0c52e 39%, #f0c52e 60%, #e5e5e5 60%);
-}
-
-.services input:focus ~ .services-controls {
-  box-shadow:
-    0 0 0 3px #ffffff,
-    0 0 0 6px #2f7cc0;
-}
-
-.services-controls .btn:hover,
-.services-controls .btn:focus {
-    background-image: none;
-}
-
-.services-1:checked ~ .services-controls li:first-child label,
-.services-2:checked ~ .services-controls li:nth-child(2) label,
-.services-3:checked ~ .services-controls li:last-child label {
+.services-1:checked ~ .services-controls label[for="services-btn-1"],
+.services-2:checked ~ .services-controls label[for="services-btn-2"],
+.services-3:checked ~ .services-controls label[for="services-btn-3"] {
   padding-right: 120px;
 
   color: #f7e184;
 
   background-color: #000000;
   background-image: none;
+}
+
+.services-1:focus ~ .services-controls label[for="services-btn-1"],
+.services-2:focus ~ .services-controls label[for="services-btn-2"],
+.services-3:focus ~ .services-controls label[for="services-btn-3"] {
+  padding-right: 110px;
+
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
 }
 
 .services-list {
@@ -1286,72 +1351,6 @@ table {
   color: #000000;
 }
 
-.filter-checkbox:disabled + label,
-.filter-radio:disabled + label {
-  color: #a6a6a6;
-}
-
-.filter-checkbox + label::before {
-  content: "";
-
-  position: absolute;
-  top: -3px;
-  left: -1px;
-
-  width: 23px;
-  height: 23px;
-
-  background: url("../img/checkbox-off.svg") 0 0 no-repeat;
-
-}
-
-.filter-checkbox:checked + label::before {
-  width: 27px;
-  height: 23px;
-
-  background: url("../img/checkbox-on.svg") 0 0 no-repeat;
-
-}
-
-.filter-radio ~ ul label::before{
-  content: "";
-
-  position: absolute;
-  top: -5px;
-  left: -42px;
-
-  width: 25px;
-  height: 25px;
-
-  background: url("../img/radio-off.svg") 0 0 no-repeat;
-}
-
-.filter-radio-1:checked ~ ul label[for="filter-bluetooth-yes"]::before,
-.filter-radio-2:checked ~ ul label[for="filter-bluetooth-no"]::before {
-
-  background: url("../img/radio-on.svg") 0 0 no-repeat;
-}
-
-
-.filter-checkbox:hover + label::before,
-.filter-checkbox:focus + label::before,
-.filter-radio:hover + label::before,
-.filter-radio:focus + label::before {
-  opacity: 0.6;
-}
-
-.filter-checkbox:focus + label::before,
-.filter-radio:focus ~ .select-bluetooth-list {
-  box-shadow:
-    0 0 0 3px #ffffff,
-    0 0 0 6px #2f7cc0;
-}
-
-.filter-checkbox:disabled + label::before,
-.filter-radio:disabled + label::before {
-  opacity: 0.25;
-}
-
 .select-price {
   margin: 0;
   margin-top: 38px;
@@ -1425,6 +1424,93 @@ table {
   background-color: transparent;
 }
 
+.filter-checkbox:disabled + label,
+.filter-radio:disabled + label {
+  color: #a6a6a6;
+}
+
+.filter-checkbox + label::before {
+  content: "";
+
+  position: absolute;
+  top: -3px;
+  left: -1px;
+
+  width: 23px;
+  height: 23px;
+
+  background: url("../img/checkbox-off.svg") 0 0 no-repeat;
+
+}
+
+.filter-checkbox:checked + label::before {
+  width: 27px;
+  height: 23px;
+
+  background: url("../img/checkbox-on.svg") 0 0 no-repeat;
+
+}
+
+.filter-checkbox:hover + label::before,
+.filter-checkbox:focus + label::before,
+.filter-radio:hover + label::before,
+.filter-radio:focus + label::before {
+  opacity: 0.6;
+}
+
+.filter-checkbox,
+.filter-radio {
+  display: none;
+}
+
+.filter-inner:focus-within .filter-checkbox,
+.filter-inner:focus-within .filter-radio {
+  display: block;
+}
+
+.filter-inner.focus-within .filter-checkbox,
+.filter-inner.focus-within .filter-radio {
+  display: block;
+}
+
+.filter-checkbox:focus + label::before {
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
+}
+
+.filter-checkbox:disabled + label::before,
+.filter-radio:disabled + label::before {
+  opacity: 0.25;
+}
+
+.filter-radio ~ ul label::before{
+  content: "";
+
+  position: absolute;
+  top: -5px;
+  left: -42px;
+
+  width: 25px;
+  height: 25px;
+
+  background: url("../img/radio-off.svg") 0 0 no-repeat;
+}
+
+.filter-radio-1:checked ~ ul label[for="filter-bluetooth-yes"]::before,
+.filter-radio-2:checked ~ ul label[for="filter-bluetooth-no"]::before {
+
+  background: url("../img/radio-on.svg") 0 0 no-repeat;
+}
+
+.filter-radio-1:focus ~ ul label[for="filter-bluetooth-yes"]::before,
+.filter-radio-2:focus ~ ul label[for="filter-bluetooth-no"]::before {
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
+}
+
 .select-color {
   margin: 0;
   margin-top: 38px;
@@ -1460,15 +1546,8 @@ table {
   padding-left: 39px;
 }
 
-.filter .btn {
+.filter-btn {
   width: 200px;
-
-  background-image: linear-gradient(#efefef 39%, #f0c52e 39%, #f0c52e 60%, #efefef 60%);
-}
-
-.filter .btn:hover,
-.filter .btn:focus {
-  background-image: none;
 }
 
 .catalog {
@@ -1546,26 +1625,52 @@ table {
   top: 24px;
   left: 788px;
 
+  display: flex;
+
   width: 42px;
   height: 20px;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.sorting-controls li {
+  width: 50%;
+}
+
+.sorting-controls label {
+  display: flex;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
-.sorting-direction:focus ~ .sorting-controls {
+.catalog > input {
+  display:none;
+}
+
+.catalog:focus-within > input {
+  display: block;
+}
+.catalog.focus-within > input {
+  display: block;
+}
+
+.sorting-trigger:focus ~ .sorting-controls {
   box-shadow:
-    0 0 0 3px #ffffff,
-    0 0 0 6px #2f7cc0;
+  0 0 0 3px #ffffff,
+  0 0 0 6px #2f7cc0;
 }
 
 .sorting-controls .sort-icon::after {
   opacity: 0.2;
 }
 
-
+.sorting-controls .sort-icon:hover::after,
+.sorting-controls .sort-icon:focus::after {
+  opacity: 0.4;
+}
 
 .sorting-controls .sort-up-icon::after {
   content: "";
@@ -1595,17 +1700,16 @@ table {
   background: url("../img/icon-down-dir.svg") 0 0 no-repeat;
 }
 
-.sort-by-down:checked ~ .sorting-controls .sort-up-icon::after {
-  opacity: 1;
-}
-
+.sort-by-down:checked ~ .sorting-controls .sort-up-icon::after,
 .sort-by-up:checked ~ .sorting-controls .sort-down-icon::after {
   opacity: 1;
 }
 
-.catalog .sorting-controls .sort-icon:hover::after,
-.catalog .sorting-controls .sort-icon:focus::after {
-  opacity: 0.4;
+.sort-by-down:focus ~ .sorting-controls .sort-up-icon::after,
+.sort-by-up:focus ~ .sorting-controls .sort-down-icon::after {
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
 }
 
 .sort-by-down:checked ~ .inner .catalog-list {
@@ -1706,13 +1810,7 @@ table {
   padding-right: 0;
   padding-left: 0;
 
-  background-image: linear-gradient(rgba(238, 238, 238, 0.70) 39%, #f0c52e 39%, #f0c52e 60%, rgba(238, 238, 238, 0.70) 60%);
   cursor: pointer;
-}
-
-.catalog-item-menu .btn:hover,
-.catalog-item-menu .btn:focus {
-  background-image: none;
 }
 
 .catalog-item-btn-compare {
@@ -1765,12 +1863,12 @@ table {
 
 .pagination-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 90px;
   margin: 0;
   margin-top: 6px;
-  margin-left: 15px;
+  margin-left: 14px;
   padding: 0;
 
   list-style: none;
