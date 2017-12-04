@@ -1313,13 +1313,19 @@ table {
   position:relative;
 
   border: none;
+
+  outline: 1px solid red;
 }
 
-.filter-form fieldset::before {
+.line-base {
+  position: relative;
+}
+
+.filter-form .line-base::before {
   content: "";
 
   position: absolute;
-  top: -14px;
+  top: -54px;
   left: 0;
 
   width: 100%;
@@ -1353,7 +1359,6 @@ table {
 
 .select-price {
   margin: 0;
-  margin-top: 38px;
   padding: 0;
   padding-top: 26px;
 }
@@ -1535,14 +1540,13 @@ table {
 
 }
 
-.select-bluetooth ul {
-  width: 70px;
+.select-bluetooth-list {
   margin: 0;
   margin-top: 20px;
   padding: 0;
 }
 
-.select-bluetooth li {
+.select-bluetooth-list li {
   padding-left: 39px;
 }
 
@@ -2216,8 +2220,8 @@ table {
   content: "";
 
   position: absolute;
-  width: 26.943px;
-  height: 34.09px;
+  width: 27px;
+  height: 35px;
 
   background-image: url("../img/logo-html.svg");
   background-repeat: no-repeat;
