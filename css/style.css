@@ -47,6 +47,7 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
+  padding-top: 40px;
 }
 
 a {
@@ -95,8 +96,6 @@ input[type="radio"].visually-hidden,
   display: inline-block;
   vertical-align: top;
   padding: 10px 40px;
-
-
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -105,7 +104,6 @@ input[type="radio"].visually-hidden,
   color: #000000;
   text-transform: uppercase;
   text-align: center;
-
   background-color: transparent;
   background-image: linear-gradient(transparent 39%, #f0c52e 39%, #f0c52e 60%, transparent 60%);
   border: none;
@@ -128,12 +126,8 @@ input[type="radio"].visually-hidden,
   padding: 0 20px;
 }
 
-.main-header {
-   margin-top: 40px;
-}
-
 .inner-page .main-header {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .main-navigation {
@@ -142,7 +136,7 @@ input[type="radio"].visually-hidden,
   display: flex;
   flex-direction: column;
   width: 1040px;
-  min-height: 267px;
+  min-height: 266px;
   padding: 0 60px;
   padding-top: 33px;
 
@@ -456,7 +450,7 @@ input[type="radio"].visually-hidden,
   content: "";
 
   position: absolute;
-  right: -26px;
+  right: -27px;
   top: 3px;
 
   width: 16px;
@@ -497,13 +491,16 @@ input[type="radio"].visually-hidden,
 }
 
 .sub-menu {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: 1;
 
   display: none;
+  margin: 0;
   margin-top: 23px;
-  width: 1040px;
-  min-height: 143px;
+  padding: 0 60px;
+  min-height: 141px;
 
   background-color: #f7e296;
 }
@@ -548,7 +545,7 @@ input[type="radio"].visually-hidden,
 
 .promo-wrapper {
   position: relative;
-  height: 385px;
+  height: 387px;
 
   margin-bottom: 95px;
 }
@@ -751,6 +748,7 @@ table {
   line-height: 20px;
   letter-spacing: 0.01em;
   color: #464646;
+  text-align: left;
 }
 
 .promo-item .item-image {
@@ -805,10 +803,12 @@ table {
 
 .categories-item:nth-child(2) img {
   align-self: flex-end;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
+  margin-left: 2px;
 }
 
 .categories-item:nth-child(3) img {
+  margin-top: 2px;
   margin-left: 10px;
 }
 
@@ -818,11 +818,13 @@ table {
 }
 
 .categories-item:nth-child(5) img {
+  margin-top: 1px;
   margin-left: 7px;
 }
 
 .categories-item:last-child img {
   margin-top: 6px;
+  margin-right: 1px;
 }
 
 .categories-item-link:hover .item-background,
@@ -920,14 +922,12 @@ table {
 
 .services-controls {
   position: relative;
-
   width: 265px;
   margin: 0;
   margin-top: 11px;
   margin-right: 134px;
   margin-left: 2px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -949,7 +949,6 @@ table {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 23px;
-
   text-align: center;
 }
 
@@ -957,9 +956,7 @@ table {
 .services-2:checked ~ .services-controls label[for="services-btn-2"],
 .services-3:checked ~ .services-controls label[for="services-btn-3"] {
   padding-right: 120px;
-
   color: #f7e184;
-
   background-color: #000000;
   background-image: none;
 }
@@ -1123,7 +1120,7 @@ table {
   display: flex;
   justify-content: space-between;
   min-height: 530px;
-  margin-bottom: 75px;
+  margin-bottom: 76px;
 }
 
 .about {
@@ -1178,13 +1175,29 @@ table {
   color: #464646;
 }
 
-.about ul {
+.about .company-list {
   margin: 0;
   margin-top: 66px;
   margin-left: 35px;
   padding: 0;
 
   list-style: none;
+}
+.company-list li {
+  position: relative;
+}
+
+.company-list li::before {
+  content: "";
+
+  position: absolute;
+  top: 17px;
+  left: -34px;
+
+  width: 4px;
+  height: 4px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
 }
 
 .about li {
@@ -1209,11 +1222,14 @@ table {
   padding-right: 0;
 }
 
+main {
+}
+
 /*catalog.html*/
 .page-title {
   margin: 0;
   margin-left: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -1226,7 +1242,7 @@ table {
   display: flex;
   margin: 0;
   margin-left: 60px;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   padding: 0;
 
   list-style: none;
@@ -1292,15 +1308,15 @@ table {
 
     display: flex;
     align-items: center;
-    min-height: 70px;
+    height: 70px;
     margin-bottom: 82px;
-
-    vertical-align: middle;
 
     background-color: rgba(0, 0, 0, 0.08);
 }
 
 .filter h2 {
+  margin-bottom: 14px;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -1556,6 +1572,7 @@ table {
 
 .catalog {
   position: relative;
+  margin-bottom: 74px;
 
   width: calc(50% + 250px);
 }
@@ -1572,13 +1589,13 @@ table {
 
 .sorting .inner {
   display: flex;
+  height: 70px;
   align-items: center;
-  min-height: 70px;
 }
 
 .sorting h3 {
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -1592,8 +1609,8 @@ table {
 .sorting ul {
   display: flex;
   margin: 0;
-  margin-left: 58px;
-  margin-bottom: 5px;
+  margin-left: 55px;
+  margin-bottom: 2px;
   padding: 0;
 
   list-style: none;
@@ -1626,8 +1643,8 @@ table {
 
 .sorting-controls {
   position: absolute;
-  top: 24px;
-  left: 788px;
+  top: 25px;
+  left: 789px;
 
   display: flex;
 
@@ -1843,9 +1860,7 @@ table {
 .pagination {
   display: flex;
   justify-content: space-between;
-  min-height: 70px;
-  margin-bottom: 75px;
-
+  height: 70px;
   background-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -1913,9 +1928,8 @@ table {
   position: relative;
 
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  padding-top: 62px;
+  padding-top: 60px;
   padding-bottom: 70px;
 }
 
@@ -1923,7 +1937,7 @@ table {
   content: "";
 
   position: absolute;
-  bottom: 66px;
+  bottom: 87px;
   left: 20px;
 
   width: 80px;
@@ -1940,7 +1954,6 @@ table {
   position: relative;
 
   display: flex;
-  justify-content: space-between;
   margin-bottom: 25px;
 }
 
@@ -1973,6 +1986,7 @@ table {
 .footer-user-menu {
   display: flex;
   margin: 0;
+  margin-left: auto;
   padding: 0;
 }
 
@@ -2016,7 +2030,7 @@ table {
   content: "";
 
   position: absolute;
-  top: 13px;
+  top: 12px;
   left: 0;
 
   width: 13px;
@@ -2031,7 +2045,7 @@ table {
   content: "";
   position: absolute;
   top: 14px;
-  left: 5px;
+  left: 6px;
 
   width: 10px;
   height: 10px;
@@ -2074,7 +2088,7 @@ table {
 
 .main-footer-adress {
   width: 300px;
-  margin-right: 65px;
+  margin-right: 66px;
 }
 
 .main-footer-phone {
@@ -2096,9 +2110,9 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 430px;
+  width: 428px;
   margin: 0;
-  margin-top: 6px;
+  margin-top: 7px;
   margin-right: auto;
   padding: 0;
 }
@@ -2129,26 +2143,18 @@ table {
 
 .main-footer-social {
   display: flex;
-  justify-content: space-between;
 }
 
 .social-list {
   display: flex;
   justify-content: space-between;
-  width: 110px;
+  width: 142px;
   margin: 0;
-  margin-top: 18px;
-  margin-left: 525px;
+  margin-left: 508px;
   padding: 0;
 }
 
 .social-list a {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   opacity: 0.3;
 }
 
@@ -2161,50 +2167,8 @@ table {
   opacity: 0.1;
 }
 
-.social-btn-facebook::after {
-  content: "";
-
-  position: absolute;
-
-  width: 32px;
-  height: 32px;
-
-  background-image: url("../img/fb.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.social-btn-instagram::after {
-  content: "";
-
-  position: absolute;
-
-  width: 32px;
-  height: 32px;
-
-  background-image: url("../img/instagram.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.social-btn-twitter::after {
-  content: "";
-
-  position: absolute;
-
-  width: 32px;
-  height: 32px;
-
-  background-image: url("../img/twitter.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
 .main-footer .copyright {
-  position: relative;
-  margin-right: 26px;
-
-  opacity: 1;
+  margin-left: auto;
 }
 
 .main-footer .copyright:hover,
@@ -2214,18 +2178,6 @@ table {
 
 .main-footer .copyright:active {
   opacity: 0.3;
-}
-
-.main-footer .copyright::after {
-  content: "";
-
-  position: absolute;
-  width: 27px;
-  height: 35px;
-
-  background-image: url("../img/logo-html.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .feedback-form label {
