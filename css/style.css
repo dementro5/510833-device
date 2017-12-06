@@ -141,6 +141,7 @@ input[type="radio"].visually-hidden,
   padding-top: 33px;
 
   background-color: #f7e296;
+  outline: 1px solid red;
 }
 
 .inner-page .main-navigation {
@@ -492,7 +493,7 @@ input[type="radio"].visually-hidden,
 
 .sub-menu {
   position: absolute;
-  left: 0px;
+  left: 0;
   z-index: 2;
 
   display: none;
@@ -2206,6 +2207,78 @@ main {
   opacity: 0.3;
 }
 
+.modal .modal-close {
+  position: absolute;
+  right: 23px;
+  top: 22px;
+
+  width: 55px;
+  height: 55px;
+  padding: 0;
+
+  background-color: #f0c52e;
+  border: none;
+  border-radius: 50%;
+
+  opacity: 0.5;
+}
+
+.modal .modal-close:hover,
+.modal .modal-close:focus {
+  opacity: 1;
+}
+
+.modal .modal-close:active {
+  opacity: 0.3;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 27px;
+
+  width: 2px;
+  height: 30px;
+
+  background-color: #ffffff;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal {
+  box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
+}
+
+.modal-feedback {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  display: none;
+  width: 760px;
+  padding: 96px 100px;
+  padding-bottom: 77px;
+  margin-top: -277px;
+  margin-left: -480px;
+
+  background: #ffffff;
+}
+
+.feedback-form p {
+  margin: 0;
+}
+
 .feedback-form label {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -2216,14 +2289,35 @@ main {
 
 .feedback-form input,
 .feedback-form textarea {
+  box-sizing: border-box;
+
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: rgba(70, 70, 70, 0.4);
 
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: rgba(229, 229, 229, 0.5);
   border: none;
+}
+
+.feedback-form input {
+  width: 360px;
+  height: 50px;
+  margin-top: 10px;
+  padding: 0 20px;
+  padding-bottom: 6px;
+}
+
+.feedback-form textarea {
+  width: 760px;
+  height: 156px;
+  margin-top: 10px;
+  margin-bottom: 36px;
+  padding: 0 20px;
+  padding-top: 14px;
+
+  resize: none;
 }
 
 .feedback-form input:hover,
@@ -2233,14 +2327,17 @@ main {
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
+  padding-left: 17px;
+
   color: rgba(70, 70, 70, 1);
 
   background-color: #ffffff;
   border: 3px solid rgba(240, 197, 46,0.5);
   outline: none;
-  box-shadow:
-		0 0 0 3px #ffffff,
-		0 0 0 6px #2f7cc0;
+}
+
+.feedback-form textarea:focus {
+  padding-top: 11px;
 }
 
 .feedback-form input:invalid,
@@ -2248,8 +2345,41 @@ main {
   color: rgba(70, 70, 70, 0.4);
 
   background-color: rgba(237, 181, 181, 0.5);
+  border: none;
 }
 
-.modal-map img {
-  box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
+.feedback-form .inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.feedback-inner p {
+  width: 360px;
+}
+
+.feedback-form .btn {
+  width: 200px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.modal-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 960px;
+  height: 559px;
+  margin-top: -280px;
+  margin-left: -480px;
+}
+
+.modal-map p {
+  margin: 0;
+}
+
+.modal-show {
+  display: block;
 }

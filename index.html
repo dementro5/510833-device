@@ -336,36 +336,38 @@
     </div>
   </footer>
 
-  <section class="modal modal-feedback">
+  <section class="modal modal-feedback modal-show">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="inner feedback-inner">
+        <p>
+          <label>
+            Ваше имя:
+            <input type="text" name="feedback-name" placeholder="Представьтесь пожалуйста">
+          </label>
+        </p>
+        <p>
+          <label>
+            Ваш e-mail:
+            <input type="email" name="feedback-email" placeholder="Для отправки ответа">
+          </label>
+        </p>
+      </div>
       <p>
         <label>
-          Ваше имя:<br>
-          <input type="text" name="feedback-name" placeholder="Представьтесь пожалуйста">
-        </label>
-      </p>
-      <p>
-        <label>
-          Ваш e-mail:<br>
-          <input type="email" name="feedback-email" placeholder="Для отправки ответа">
-        </label>
-      </p>
-      <p>
-        <label>
-          Текст письма:<br>
-          <textarea name="feedback-message" placeholder="В свободной форме"></textarea>
+          Текст письма:
+          <textarea class="message" name="feedback-message" placeholder="В свободной форме"></textarea>
         </label>
       </p>
       <button class="btn" type="submit">Отправить</button>
     </form>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p><img src="img/map-big.jpg" width="960" height="559" alt="Крупная карта офиса по адресу улица Строителей, 15"></p>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <script src="js/focus-within.js"></script>
 </body>
