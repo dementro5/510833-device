@@ -2211,6 +2211,7 @@ main {
   position: absolute;
   right: 23px;
   top: 22px;
+  z-index: 1;
 
   width: 55px;
   height: 55px;
@@ -2257,13 +2258,12 @@ main {
 .modal {
   box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
 }
-
 .modal-feedback {
   position: fixed;
 
   top: 50%;
   left: 50%;
-  z-index: 1;
+  z-index: 2;
 
   display: none;
   width: 760px;
@@ -2377,9 +2377,88 @@ main {
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@keyframes right-to-left {
+  0% {
+    transform: translate(2000px, 2000px);
+  }
+
+  70% {
+    transform: translate(30px, 30px);
+  }
+
+  90% {
+    transform: translate(-10px, -10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-10px, -10px);
+  }
+
+  20% {
+    transform: translate(30px, 30px);
+  }
+
+  100% {
+    transform: translate(2000px, 2000px);
+  }
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-1deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(1deg);
+  }
 }
 
 .modal-show {
   display: block;
+
+  animation: right-to-left 0.6s;
+}
+
+.modal-hide {
+  animation: left-to-right 0.6s;
+}
+
+.modal-error {
+  animation: rotate 0.6s;
 }
