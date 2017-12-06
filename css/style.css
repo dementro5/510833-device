@@ -77,21 +77,7 @@ input[type="radio"].visually-hidden,
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.visually-hidden-btn {
-  position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -141,7 +127,6 @@ input[type="radio"].visually-hidden,
   padding-top: 33px;
 
   background-color: #f7e296;
-  outline: 1px solid red;
 }
 
 .inner-page .main-navigation {
@@ -1044,7 +1029,7 @@ table {
 }
 
 .services-list p {
-  marign: 0;
+  margin: 0;
   padding-left: 0px;
 
   font-family: "Open Sans", Arial, sans-serif;
