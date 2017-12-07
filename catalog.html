@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Интернет-Магазин «Device»</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <noscript>
-    <style>
-      .sub-menu {
-        display: flex;
-      }
-    </style>
-  </noscript>
 </head>
 <body class="inner-page">
   <header class="main-header container">
@@ -113,7 +106,7 @@
                   <label for="filter-color-red">Красный</label>
                 </li>
                 <li>
-                  <input class="filter-checkbox visually-hidden" id="filter-color-pink" type="checkbox" name="color-pink" disabled>
+                  <input class="filter-checkbox visually-hidden" id="filter-color-pink" type="checkbox" name="color-pink">
                   <label for="filter-color-pink">Розовый</label>
                 </li>
               </ul>
@@ -232,7 +225,7 @@
     </div>
   </main>
   <footer class="main-footer">
-    <div class="main-footer-wrapper container">
+    <div class="inner container">
       <section class="main-footer-user">
         <h2 class="visually-hidden">Для пользователя</h2>
         <a class="main-footer-logo" href="index.html">
@@ -277,6 +270,7 @@
       </section>
     </div>
   </footer>
+  <script src="js/checkjssupport.js"></script>
   <script src="js/focus-within.js"></script>
 </body>
 </html>

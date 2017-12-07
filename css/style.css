@@ -80,7 +80,6 @@ input[type="radio"].visually-hidden,
 
 .btn {
   display: inline-block;
-  vertical-align: top;
   padding: 10px 40px;
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -90,9 +89,11 @@ input[type="radio"].visually-hidden,
   color: #000000;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: top;
   background-color: transparent;
-  background-image: linear-gradient(transparent 39%, #f0c52e 39%, #f0c52e 60%, transparent 60%);
+  background-image: linear-gradient(transparent 38%, #f0c52e 38%, #f0c52e 60%, transparent 60%);
   border: none;
+  cursor: pointer;
 }
 
 
@@ -455,7 +456,7 @@ input[type="radio"].visually-hidden,
 
 .main-menu > li:nth-child(2) {
    width: 140px;
-   margin-right: 20px;
+   margin-right: 18px;
 }
 
 .main-menu > li:nth-child(3) {
@@ -481,12 +482,29 @@ input[type="radio"].visually-hidden,
   left: 0;
   z-index: 2;
 
-  display: none;
+  display: flex;
   width: 1040px;
   min-height: 120px;
   padding: 22px 60px;
 
   background-color: #f7e296;
+}
+
+/*If js doesn't work, we don't hide the menu, otherwise we won't be able to get on him by tab (polufill does not work)*/
+.js .sub-menu {
+  display: none;
+}
+
+.catalog-block:hover .sub-menu {
+  display: flex;
+}
+
+.catalog-block:focus-within .sub-menu {
+  display: flex;
+}
+
+.catalog-block.focus-within .sub-menu {
+  display:flex;
 }
 
 .sub-menu ul {
@@ -510,31 +528,10 @@ input[type="radio"].visually-hidden,
   text-transform: none;
 }
 
-.catalog-block:hover .sub-menu {
-  display: flex;
-}
-
-.catalog-block:focus-within .sub-menu {
-  display: flex;
-}
-
-.catalog-block.focus-within .sub-menu {
-  display:flex;
-}
-
-.promo-wrapper {
-  position: relative;
-  height: 387px;
-
-  margin-bottom: 95px;
-}
-
 .promo {
-  position: absolute;
-  bottom: 0;
-
-  margin-left: 30px;
-  margin-right: 50px;
+  position: relative;
+  top: -111px;
+  margin-bottom: -16px;
 }
 
 .promo > input {
@@ -555,29 +552,30 @@ input[type="radio"].visually-hidden,
     0 0 0 6px #2f7cc0;
 }
 
+.promo:focus-within > .promo-trigger:not(:focus) {
+  display: none;
+}
+
 .promo.focus-within > .promo-trigger:not(:focus) {
   display: none;
 }
 
 .promo-controls {
   position: absolute;
-  z-index: 1;
-  top: 321px;
-  right: 25px;
-
+  bottom: 151px;
+  right: 95px;
   display: flex;
+  justify-content: space-between;
+  width: 92px;
   margin: 0;
   padding: 0;
-
   list-style: none;
-}
-
-.promo-controls li:not(:last-child) {
-  margin-right: 8px;
 }
 
 .promo-controls label {
     position: relative;
+    z-index: 1;
+
     display: block;
     width: 25px;
     height: 25px;
@@ -603,10 +601,11 @@ input[type="radio"].visually-hidden,
 .promo-2:checked ~ .promo-controls label[for="promo-btn-2"]::after,
 .promo-3:checked ~ .promo-controls label[for="promo-btn-3"]::after {
   position: absolute;
-  top: 9px;
-  left: 9px;
+  top: 10px;
+  left: 10px;
 
-  padding: 2px;
+  width: 2px;
+  height: 2px;;
 
   border: 1px solid black;
   border-radius: 50%;
@@ -623,6 +622,7 @@ input[type="radio"].visually-hidden,
 
 .promo-list {
   margin: 0;
+  margin-left: 30px;
   padding: 0;
 }
 
@@ -634,15 +634,12 @@ input[type="radio"].visually-hidden,
 .promo-2:checked ~ .promo-list li:nth-of-type(2),
 .promo-3:checked  ~ .promo-list li:last-child {
   display: flex;
-  align-items: flex-start;
 }
 
 .item-offer {
   position: relative;
-
-  width: 535px;
-  padding-top: 78px;
-  padding-right: 15px;
+  width: 530px;
+  padding-top: 79px;
 }
 
 .promo-item h3 {
@@ -663,8 +660,8 @@ input[type="radio"].visually-hidden,
 
 .promo-item .item-number {
   position: absolute;
-  top: -194px;
-  right: -5px;
+  top: -193px;
+  right: -24px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -676,7 +673,7 @@ input[type="radio"].visually-hidden,
 
 .promo-item .item-description {
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
   margin-left: 40px;
 
   font-family: "Open Sans", Arial, sans-serif;
@@ -689,8 +686,8 @@ input[type="radio"].visually-hidden,
 
 .promo-item .btn {
   min-width: 220px;
-  margin-bottom: 50px;
-  margin-left: 40px;
+  margin-bottom: 49px;
+  margin-left: 41px;
   padding-right: 0;
   padding-left: 0;
 
@@ -736,6 +733,10 @@ table {
   width: 530px;
   height: 497px;
   margin: 0;
+}
+
+.catigories {
+  margin-bottom: 185px;
 }
 
 .catigories ul {
@@ -843,27 +844,14 @@ table {
   color: #000000;
 }
 
-.services-wrapper {
-  position: relative;
-
-  min-height: 473px;
-  margin-bottom: 94px;
-}
-
 .services {
-  position: absolute;
-  bottom: 0;
-
-  min-height: 288px;
-  width: 100%;
-
+  margin-bottom: 94px;
   background-color: #e5e5e5;
 }
 
 .services .inner {
   position: relative;
-  top: -31px;
-
+  top: -100px;
   display: flex;
 }
 
@@ -892,43 +880,33 @@ table {
  position: absolute;
  top: 0;
  bottom: 0;
- width: 270px;
+ width: 283px;
 
- box-shadow:
-   0 0 0 3px #ffffff,
-   0 0 0 6px #2f7cc0;
+ box-shadow: 0 0 0 3px #2f7cc0;
 }
 
 .services-controls {
   position: relative;
-  width: 265px;
+
+  width: 277px;
   margin: 0;
-  margin-top: 11px;
-  margin-right: 134px;
-  margin-left: 2px;
-  padding: 0;
+  margin-right: 116px;
+  margin-bottom: -31px;
+  padding: 80px 0;
+  padding-bottom: 70px;
+
   list-style: none;
-}
-
-.services-controls::after {
-  position: absolute;
-  top: -80px;
-  left: 275px;;
-
-  width: 7px;
-  height: 319px;
-
-  background-color: #000000;
-
-  content: "";
+  border-right: 7px solid #000000;
 }
 
 .services-controls .btn {
   width: 160px;
   padding-left: 0;
   padding-right: 0;
+}
+
+.controls-item:not(:last-child) .btn {
   margin-bottom: 23px;
-  text-align: center;
 }
 
 .services-1:checked ~ .services-controls label[for="services-btn-1"],
@@ -955,6 +933,7 @@ table {
 
   width: 460px;
   margin: 0;
+  margin-top: 69px;
   padding: 0;
 }
 
@@ -987,8 +966,8 @@ table {
   content: "";
 
   position: absolute;
-  top: 15px;
-  right: -234px;
+  top: 16px;
+  right: -235px;
 
   width: 136px;
   height: 164px;
@@ -1002,7 +981,7 @@ table {
   content: "";
 
   position: absolute;
-  top: -7px;
+  top: -8px;
   right: -255px;
 
   width: 171px;
@@ -1112,20 +1091,17 @@ table {
 
 .contacts {
   position: relative;
-
-  width: 560px;
+  width: 563px;
 }
 
 .about::before,
 .contacts::before {
   content: "";
-
   position: absolute;
   top: -48px;
-
+  left: 0px;
   width: 80px;
   height: 7px;
-
   background-color: #000000;
 }
 
@@ -1190,6 +1166,7 @@ table {
 .contacts .map-preview {
   margin-top: 40px;
   margin-bottom: 4px;
+  margin-left: 3px;
 }
 
 .about .btn,
@@ -1197,6 +1174,7 @@ table {
   min-width: 260px;
   margin: 0;
   margin-top: 55px;
+  margin-left: 1px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1344,6 +1322,8 @@ main {
   line-height: 40px;
   letter-spacing: 0.01em;
   color: #000000;
+
+  cursor: pointer;
 }
 
 .filter ul {
@@ -1458,8 +1438,9 @@ main {
   opacity: 0.6;
 }
 
-.filter-checkbox,
-.filter-radio {
+/*If js doesn't work, we don't hide inputs, otherwise we won't be able to get on him by tab (polufill does not work)*/
+.js .filter-checkbox,
+.js .filter-radio {
   display: none;
 }
 
@@ -1567,7 +1548,10 @@ main {
 
 .sorting .inner {
   display: flex;
-  height: 70px;
+  justify-content: space-between;
+  width: 710px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   align-items: center;
 }
 
@@ -1586,11 +1570,11 @@ main {
 
 .sorting ul {
   display: flex;
+  flex-wrap: wrap;
+  width: 510px;
   margin: 0;
-  margin-left: 55px;
   margin-bottom: 2px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -1623,14 +1607,11 @@ main {
   position: absolute;
   top: 25px;
   left: 789px;
-
   display: flex;
-
   width: 42px;
   height: 20px;
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -1815,11 +1796,16 @@ main {
   left: 0;
   z-index: 1;
 
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
 
   background-color: rgba(238, 238, 238, 0.70);
+}
+
+/*If js doesn't work, we don't hide the menu, otherwise we won't be able to get on him by tab (polufill does not work)*/
+.js .catalog-item-menu {
+  display: none;
 }
 
 .catalog-item-image:hover .catalog-item-menu {
@@ -1925,7 +1911,6 @@ main {
 .pagination .pagination-btn:active {
   color: rgba(0, 0, 0, 0.3);
 }
-/*rules for index.html*/
 
 .main-footer {
   position: relative;
@@ -1935,7 +1920,7 @@ main {
   background-color: #464646;
 }
 
-.main-footer-wrapper {
+.main-footer .inner {
   position: relative;
 
   display: flex;
@@ -1944,7 +1929,7 @@ main {
   padding-bottom: 70px;
 }
 
-.main-footer-wrapper::after {
+.main-footer .inner::after {
   content: "";
 
   position: absolute;
@@ -2161,7 +2146,7 @@ main {
   justify-content: space-between;
   width: 142px;
   margin: 0;
-  margin-left: 508px;
+  margin-left: 509px;
   padding: 0;
 }
 
@@ -2206,6 +2191,7 @@ main {
   border-radius: 50%;
 
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .modal .modal-close:hover,
@@ -2373,6 +2359,8 @@ main {
   top: 0;
   left: 0;
   z-index: 1;
+
+  border: none;
 }
 
 @keyframes right-to-left {

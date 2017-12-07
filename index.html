@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Интернет-Магазин «Device»</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <noscript>
-    <style>
-      .sub-menu {
-        display: flex;
-      }
-    </style>
-  </noscript>
 </head>
 <body>
   <header class="main-header container">
@@ -22,7 +15,7 @@
       <ul class="user-navigation">
         <li>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <label><span class="visually-hidden">Поиск по сайту</span></label>
+            <label for="search-field"><span class="visually-hidden">Поиск по сайту</span></label>
             <input id="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
             <button type="submit" tabindex="-1">Найти</button>
           </form>
@@ -60,90 +53,88 @@
   <main>
     <h1 class="visually-hidden">Интернет-«Магазин Device»</h1>
 
-    <div class="container promo-wrapper">
-      <section class="promo">
-        <h2 class="visually-hidden">Лучшие предложения</h2>
-        <button class="btn-trigger promo-trigger" type="button"></button>
-        <input class="visually-hidden promo-1" id="promo-btn-1" type="radio" name="promo-switch" checked>
-        <input class="visually-hidden promo-2" id="promo-btn-2" type="radio" name="promo-switch">
-        <input class="visually-hidden promo-3" id="promo-btn-3" type="radio" name="promo-switch">
+    <section class="promo container">
+      <h2 class="visually-hidden">Лучшие предложения</h2>
 
-        <ul class="promo-controls">
-          <li><label for="promo-btn-1"><span class="visually-hidden">Первый слайд</span></label></li>
-          <li><label for="promo-btn-2"><span class="visually-hidden">Второй слайд</span></label></li>
-          <li><label for="promo-btn-3"><span class="visually-hidden">Третий слайд</span></label></li>
-        </ul>
+      <button class="btn-trigger promo-trigger" type="button">Включить подсветку кнопок слайдера</button>
+      <input class="visually-hidden promo-1" id="promo-btn-1" type="radio" name="promo-switch" checked>
+      <input class="visually-hidden promo-2" id="promo-btn-2" type="radio" name="promo-switch">
+      <input class="visually-hidden promo-3" id="promo-btn-3" type="radio" name="promo-switch">
 
-        <ul class="promo-list">
+      <ul class="promo-controls">
+        <li><label for="promo-btn-1"><span class="visually-hidden">Первый слайд</span></label></li>
+        <li><label for="promo-btn-2"><span class="visually-hidden">Второй слайд</span></label></li>
+        <li><label for="promo-btn-3"><span class="visually-hidden">Третий слайд</span></label></li>
+      </ul>
 
-          <li class="promo-item">
-            <div class="item-offer">
-              <h3>Делай селфи,<br>как Бен Стиллер!</h3>
-              <p class="item-number">01</p>
-              <p class="item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="btn" href="longest-selfie-stick.html">Подробнее</a>
-              <table class="item-characteristics">
-                <tr>
-                  <td>8,5 м</td>
-                  <td>5 кг</td>
-                  <td>Карбон</td>
-                </tr>
-                <tr>
-                  <th>Длина палки</th>
-                  <th>Вес палки</th>
-                  <th>Материал</th>
-                </tr>
-              </table>
-            </div>
-            <p class="item-image">
-              <img src="img/promo-1.png" width="530" height="497" alt="Самая длинная палка для селфи">
-            </p>
-          </li>
+      <ul class="promo-list">
+        <li class="promo-item">
+          <div class="item-offer">
+            <h3>Делай селфи,<br>как Бен Стиллер!</h3>
+            <p class="item-number">01</p>
+            <p class="item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="btn" href="longest-selfie-stick.html">Подробнее</a>
+            <table class="item-characteristics">
+              <tr>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+              <tr>
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
+              </tr>
+            </table>
+          </div>
+          <p class="item-image">
+            <img src="img/promo-1.png" width="530" height="497" alt="Самая длинная палка для селфи">
+          </p>
+        </li>
 
-          <li class="promo-item">
-            <div class="item-offer">
-              <h3>Худеем<br>правильно!</h3>
-              <p class="item-number">02</p>
-              <p class="item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
-              <a class="btn" href="motivating-bracelet.html">Подробнее</a>
-              <table class="item-characteristics">
-                <tr>
-                  <td>48 часов</td>
-                </tr>
-                <tr>
-                  <th>Без подзарядки</th>
-                </tr>
-              </table>
-            </div>
-            <p class="item-image">
-              <img src="img/promo-2.png" width="530" height="497" alt="Мотивирующий фитнес-браслет">
-            </p>
-          </li>
+        <li class="promo-item">
+          <div class="item-offer">
+            <h3>Худеем<br>правильно!</h3>
+            <p class="item-number">02</p>
+            <p class="item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не&nbsp;пропускать занятия и соблюдать диету</p>
+            <a class="btn" href="motivating-bracelet.html">Подробнее</a>
+            <table class="item-characteristics">
+              <tr>
+                <td>48 часов</td>
+              </tr>
+              <tr>
+                <th>Без подзарядки</th>
+              </tr>
+            </table>
+          </div>
+          <p class="item-image">
+            <img src="img/promo-2.png" width="530" height="497" alt="Мотивирующий фитнес-браслет">
+          </p>
+        </li>
 
-          <li class="promo-item">
-            <div class="item-offer">
-              <h3>Порхает&nbsp;как&nbsp;бабочка,<br>жалит как пчела!</h3>
-              <p class="item-number">03</p>
-              <p class="item-description">Это обычный, на первый взгляд, квадрокоптер оснащён мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="btn" href="laser-quadcopter.html">Подробнее</a>
-              <table class="item-characteristics">
-                <tr>
-                  <td>800 м</td>
-                  <td>50 м</td>
-                </tr>
-                <tr>
-                  <th>Дальность полёта</th>
-                  <th>Радиус поражения</th>
-                </tr>
-              </table>
-            </div>
-            <p class="item-image">
-              <img src="img/promo-3.png" width="530" height="497" alt="Квадрокоптер, оснащённый лазером, замаскированным под стандартную камеру">
-            </p>
-          </li>
-        </ul>
-      </section>
-    </div>
+        <li class="promo-item">
+          <div class="item-offer">
+            <h3>Порхает&nbsp;как&nbsp;бабочка,<br>жалит как пчела!</h3>
+            <p class="item-number">03</p>
+            <p class="item-description">Это обычный, на первый взгляд, квадрокоптер оснащён мощным&nbsp;лазером, замаскированным под стандартную камеру.</p>
+            <a class="btn" href="laser-quadcopter.html">Подробнее</a>
+            <table class="item-characteristics">
+              <tr>
+                <td>800 м</td>
+                <td>50 м</td>
+              </tr>
+              <tr>
+                <th>Дальность полёта</th>
+                <th>Радиус поражения</th>
+              </tr>
+            </table>
+          </div>
+          <p class="item-image">
+            <img src="img/promo-3.png" width="530" height="497" alt="Квадрокоптер, оснащённый лазером, замаскированным под стандартную камеру">
+          </p>
+        </li>
+      </ul>
+    </section>
 
     <section class="container catigories">
       <h2 class="visually-hidden">Категории товаров</h2>
@@ -217,45 +208,43 @@
       </ul>
     </section>
 
-    <div class="services-wrapper">
-      <section class="services">
-        <div class="inner container services-inner">
-          <h2 class="visually-hidden">Услуги</h2>
-          <button class="btn-trigger services-trigger" type="button"></button>
-          <input class="visually-hidden services-1" id="services-btn-1" type="radio" name="services-switch" checked>
-          <input class="visually-hidden services-2" id="services-btn-2" type="radio" name="services-switch">
-          <input class="visually-hidden services-3" id="services-btn-3" type="radio" name="services-switch">
-          <button class="btn-trigger services-trigger" type="button"></button>
+    <section class="services">
+      <div class="inner container services-inner">
+        <h2 class="visually-hidden">Услуги</h2>
+        <button class="btn-trigger services-trigger" type="button">Включить подсветку кнопок слайдера</button>
+        <input class="visually-hidden services-1" id="services-btn-1" type="radio" name="services-switch" checked>
+        <input class="visually-hidden services-2" id="services-btn-2" type="radio" name="services-switch">
+        <input class="visually-hidden services-3" id="services-btn-3" type="radio" name="services-switch">
+        <button class="btn-trigger services-trigger" type="button">Включить подсветку кнопок слайдера</button>
 
-          <ul class="services-controls">
-            <li>
-              <label class="btn" for="services-btn-1">Доставка</label>
-            </li>
-            <li>
-              <label class="btn" for="services-btn-2">Гарантия</label>
-            </li>
-            <li>
-              <label class="btn" for="services-btn-3">Кредит</label>
-            </li>
-          </ul>
+        <ul class="services-controls">
+          <li class="controls-item">
+            <label class="btn" for="services-btn-1">Доставка</label>
+          </li>
+          <li class="controls-item">
+            <label class="btn" for="services-btn-2">Гарантия</label>
+          </li>
+          <li class="controls-item">
+            <label class="btn" for="services-btn-3">Кредит</label>
+          </li>
+        </ul>
 
-          <ul class="services-list">
-            <li>
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </li>
-            <li>
-              <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
-            </li>
-            <li>
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
+        <ul class="services-list">
+          <li>
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li>
+            <h3>Гарантия</h3>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+          </li>
+          <li>
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <section class="container brands">
       <h2 class="visually-hidden">Бренды, представленные у нас</h2>
@@ -265,8 +254,8 @@
         <li><a class="brands-gopro" href="gopro.html"><img src="img/logo-3.jpg" width="260" height="100" alt="Компания GoPro"></a></li>
         <li><a class="brands-vive" href="vive.html"><img src="img/logo-4.jpg" width="260" height="100" alt="Компания Vive"></a></li>
       </ul>
-
     </section>
+
     <div class="company-description container">
       <article class="about">
         <h2>О нас</h2>
@@ -290,7 +279,7 @@
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer-wrapper container">
+    <div class="inner container">
       <section class="main-footer-user">
         <h2 class="visually-hidden">Для пользователя</h2>
         <a class="main-footer-logo">
@@ -366,10 +355,11 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.9807515855014!2d37.52893091608424!3d55.68932240435342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf5c4c72f09%3A0xb7847c8f34eac3ea!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE2LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1512564905682" width="960" height="559" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.9807515855014!2d37.52893091608424!3d55.68932240435342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf5c4c72f09%3A0xb7847c8f34eac3ea!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE2LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1512564905682" width="960" height="559" allowfullscreen></iframe>
     <p><img src="img/map-big.jpg" width="960" height="559" alt="Крупная карта офиса по адресу улица Строителей, 15"></p>
     <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/checkjssupport.js"></script>
   <script src="js/focus-within.js"></script>
   <script src="js/script.js"></script>
 </body>

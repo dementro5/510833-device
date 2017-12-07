@@ -41,16 +41,15 @@ writeUsLink.addEventListener("click", function (evt) {
 
   if(storageLogin) {
     login.value = storageLogin;
-    email.focus();
+
+    if (storageEmail) {
+      email.value = storageEmail;
+      message.focus();
+    } else {
+      email.focus();
+    }
   } else {
     login.focus();
-  }
-
-  if (storageEmail) {
-    email.value = storageEmail;
-    message.focus();
-  } else {
-    email.focus();
   }
 });
 
